@@ -1,0 +1,46 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import { catalogMeta, catalogProducts, sourceRows } from '../data/catalog.js';
+
+assert.equal(catalogMeta.sourceRows, 754);
+assert.equal(catalogMeta.customerProducts, 617);
+assert.equal(catalogMeta.duplicatesRemoved, 137);
+assert.equal(sourceRows.length, 754);
+assert.equal(new Set(catalogProducts.map((product) => `${product.manufacturer}|${product.name}`)).size, catalogProducts.length);
+assert.ok(catalogProducts.filter((product) => product.category === 'Orthopedic').length >= 30);
+assert.ok(catalogProducts.some((product) => product.name.includes('LUMBO SACRAL BELT')));
+assert.ok(catalogProducts.some((product) => product.name.includes('KINESIOLOGY TAPE')));
+assert.ok(fs.existsSync('public/image-manifest.json'));
+const appSource = fs.readFileSync('app.js', 'utf8');
+assert.match(appSource, /cosmic-life-force-reference\.jpeg/);
+assert.match(appSource, /Quality medical and healthcare products at competitive wholesale prices/);
+assert.match(appSource, /Search medicines, healthcare products, orthopedic products/);
+assert.match(appSource, /renderQuickCategories/);
+assert.match(appSource, /loadSupabaseCatalog/);
+assert.match(fs.readFileSync('server.mjs', 'utf8'), /\/api\/catalog/);
+const stylesSource = fs.readFileSync('styles.css', 'utf8');
+assert.match(stylesSource, /--red: #d62828/);
+assert.match(stylesSource, /--blue: #1769e0/);
+assert.match(fs.readFileSync('schema.sql', 'utf8'), /image_status/);
+assert.match(fs.readFileSync('schema.sql', 'utf8'), /source_url/);
+assert.ok(fs.existsSync('scripts/discover-images.mjs'));
+assert.ok(fs.existsSync('server/supabase.mjs'));
+assert.ok(fs.existsSync('server/razorpay.mjs'));
+assert.ok(fs.existsSync('server/payments.mjs'));
+assert.ok(fs.existsSync('supabase/migrations/20260930000100_auth_rls_storage.sql'));
+assert.ok(fs.existsSync('supabase/migrations/20260930000200_razorpay_payments.sql'));
+const supabaseMigration = fs.readFileSync('supabase/migrations/20260930000100_auth_rls_storage.sql', 'utf8');
+assert.match(supabaseMigration, /enable row level security/);
+assert.match(supabaseMigration, /delivery-photos/);
+const paymentMigration = fs.readFileSync('supabase/migrations/20260930000200_razorpay_payments.sql', 'utf8');
+assert.match(paymentMigration, /create table if not exists public\.payments/);
+assert.match(paymentMigration, /webhook_event_id/);
+assert.match(paymentMigration, /payment_status/);
+assert.match(fs.readFileSync('.gitignore', 'utf8'), /\.env/);
+for (const product of catalogProducts) {
+  assert.ok(product.id && product.name && product.manufacturer && product.category);
+  assert.equal(product.price, null);
+  assert.equal(product.images.length, 0);
+  assert.equal(product.sourcePage > 0, true);
+}
+console.log('Catalog tests passed.');
