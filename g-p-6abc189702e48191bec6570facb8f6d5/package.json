@@ -1,0 +1,16 @@
+{
+  "name": "cosmic-life-force",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "build": "node scripts/build-check.mjs",
+    "test": "node scripts/test.mjs",
+    "images:discover": "node scripts/discover-images.mjs"
+  }
+}
