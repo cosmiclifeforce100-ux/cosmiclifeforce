@@ -1,0 +1,6861 @@
+{
+  "sourceRows": [
+    {
+      "sourcePage": 1,
+      "manufacturer": "ABBOTT",
+      "name": "AMOXYCLAV INJ 1.2GM"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ABBOTT",
+      "name": "C ONE SB 1.5GM INJ"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ABBOTT",
+      "name": "HYDROCORT INJ 100MG"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AKHIL IMPEX",
+      "name": "ELBIOVIT-12 INJ"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALCOLABS",
+      "name": "ACTOZOL-B LOTION"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALCOLABS",
+      "name": "ACTOZOL-B LOTION"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALCOLABS",
+      "name": "ACTOZOL-B LOTION"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALCOLABS",
+      "name": "CANDICRUSH SB 130 CAP"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALCOLABS",
+      "name": "CANDICRUSH SB 65 CAP"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALCOSMA",
+      "name": "ALCOMET CREAM 10GM"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALCOSMA",
+      "name": "ALCOMET CREAM 10GM"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALCOSMA",
+      "name": "COSNOIN-20 SOFTGEL CAP"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALCOSMA",
+      "name": "LUZIC LOTION 30ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALEMBIC",
+      "name": "AGINAL AT TAB"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALKOF (ORANGE)"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALKOF (ORANGE)"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALKOF (ORANGE)"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALKOF + SYP 60ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALKOF COFGELS"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALKOF COFGELS"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALKOF COLD & FLU TAB"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALKOF JUNIOR SYP 60ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALKOF(ORANG) SYP 60ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALKOF-DX 100ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALMOX 500M CAP"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALMOX 500M CAP"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALMOX DT 250 TAB"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "DERMIKEM OC"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "DERMIKEM OC"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "KEMPHYLLINE (ETOHYLL& THEOPHYLL) INJ"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "OMEE CAP"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "PREGAKEM CARD"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "PREGAKEM CARD"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "SUMO GEL 30 GM"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM WELLNESS LIMITED",
+      "name": "KOFCLEAR-LS JUNIOR SYP"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "ADDFRIEGHT"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "BORIC ACID 100GM"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "BORIC ACID 20GM"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "BORIC ACID 50GM"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "COTTON ROLL 10GM (AMAR)"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "COTTON ROLL 20GM(AMAR)"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "COTTON ROLL 400GM (AMAR)"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "EUCALYPTUS OIL (NILGIRI TEL)"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "HOSPIRIT 100ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "HYDROGEN PEROXIDE 400ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "PARAFFIN LIQUID 400ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "POSH PHENYL 4500ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "POVIKNOX 10%"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "POVIKNOX 5%"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "TOPLON 100ML(ANTISEPYIC)"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMBITECH",
+      "name": "BP APPARATUS (AMBITECH)"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMERICAN REMEDIES",
+      "name": "ADRENALINE BITARTRATE INJ"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ANCHOR PHARMA PVT. LTD.",
+      "name": "BISACODYL TAB"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ANGLO-FREANCH DRUGS & INDUSTRIES LI",
+      "name": "MNEITMEODFRENCH-P TAB"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ANTEX",
+      "name": "DICLOVIS-SP TAB"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AQUA FINE INJECTA PVT. LTD. PUNE",
+      "name": "CALCIUM GLUCONATE 10ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AQUA FINE INJECTA PVT. LTD. PUNE",
+      "name": "SODIUM BICARBONATE INJ"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ARCO PHARMA PVT. LTD",
+      "name": "FOLIC ACID TAB 5.MG"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ARIZZER PHARMACETICALS",
+      "name": "CANRIZE POWDER"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ARUN",
+      "name": "COTTON BANDAGE 2\" (ARUN)"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ARUN",
+      "name": "COTTON BANDAGE 4\" (ARUN) 10X3CM"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ARUN",
+      "name": "COTTON BANDAGE 6\" (ARUN) 15X3MTR"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ARUN PRODUCTS",
+      "name": "COTTON BANDAGE 3\" (ARUN)"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ARUN PRODUCTS",
+      "name": "GAUZE SCH. 18X90CM"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ARUN PRODUCTS",
+      "name": "GAUZE SCH. 18X90CM"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ASHWIN PHARMA",
+      "name": "HYDROGEN PEROXIDE 25ML (ASHWIN)"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ASTRA-IDL LIMITED",
+      "name": "CHYMOCUS FORTE TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ASUWALDI PHARMACEUTICALS",
+      "name": "A-PHYLLIN TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ASUWALDI PHARMACEUTICALS",
+      "name": "ALDOX TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ASUWALDI PHARMACEUTICALS",
+      "name": "HEMOLIDE (PARA+NIMU) TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ASUWALDI PHARMACEUTICALS",
+      "name": "HIMOL-500 TAB(PARACETAMOL)"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ASUWALDI PHARMACEUTICALS",
+      "name": "MET-400 (METRONIDAZOLE) 400MG"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ASUWALDI PHARMACEUTICALS",
+      "name": "ZECET TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ATUL PHARMACEUTICALS",
+      "name": "BETAMETHASONE TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ATUL PHARMACEUTICALS",
+      "name": "BROMHEXINE TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ATUL PHARMACEUTICALS",
+      "name": "C.P.M TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ATUL PHARMACEUTICALS",
+      "name": "C.P.M TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ATUL PHARMACEUTICALS",
+      "name": "METRONIDAZOLE TAB- 200 TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ATUL PHARMACEUTICALS",
+      "name": "NIMESULIDE TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ATUL PHARMACEUTICALS",
+      "name": "SALBUTAMOL TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "AXYZEN LIFSCIENCES",
+      "name": "ANTICO DMR CAP"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "AXYZEN LIFSCIENCES",
+      "name": "AXYCEE-500 TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "AXYZEN LIFSCIENCES",
+      "name": "AXYDEC 50 INJ"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "AXYZEN LIFSCIENCES",
+      "name": "AXYPENT DM TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "AXYZEN LIFSCIENCES",
+      "name": "AXYPENT TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "AXYZEN LIFSCIENCES",
+      "name": "PARAXEN 650 TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD DISCARDIT 10ML"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD DISCARDIT 20ML"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD DISCARDIT 2ML"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD DISCARDIT 5ML"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD NEEDLE NO 18G 1 1/2"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD NEEDLE NO 23"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD NEEDLE NO 23"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD NEEDLE NO 24"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD NEEDLE NO 24"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD SPINAL NEEDLE NO. 23"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD ULTRA-FINE II NEEDLE INDULIN SYRINGS U-40"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD ULTRA-FINE PEN NEEDLES"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTO",
+      "name": "CEFIBEST O TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "AARAM OIL"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "ACECLOBEST MR TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "ACECLOBEST PLUS TAB (BLISTER)"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "ACECLOBEST SP TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "ALBANDABEST SYP"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "ALKABEST SYRUP"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "ALPHABEST INJ PAINLESS"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "AMOXYBEST CV 375 TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "AMOXYBEST-CV 1.2GM INJ"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "AMOXYBEST-CV 625 TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "AZELOC 500 TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "BESTOPREG CARD"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "BIGORA 100 TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "CEFIBEST 200 TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "CEFIBEST 200 TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "CEFIBEST 50MG DRY SYP"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "CEFTOBEST 1000GM INJ"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "CETRIBEST SYP"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "COLDCOX -DS 100ML SYP"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "COLDCOX LS SYP 100ML"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "COLDCOX LS SYP 100ML"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "COLDCOX-BR 100ML SYP"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "DEFLOACTIVE 6 TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "DICLOBEST 1ML INJ"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "DICLOBEST 3ML INJ"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "DICLOBEST 3ML INJ"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "FLUCOBEST 200TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "GEMSOBEST CAP 1X10"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "IDOBEST LOTION 500ML"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "IROBEST INJ"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "LC-BEST TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "LULIACTIVE 1% CREAM 30GM"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "MONTIBEST LC SYP"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "MONTIBEST LC SYP"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "OFLOBEST 200 TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "OFLOBEST 200(B/L) TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "OFLOBEST-M SUSP"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "OFLOBEST-M SUSP"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "ONDABEST -MD TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "PANTABEST -40 DSR CAP"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "PANTABEST 40 TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "PANTABEST 40 TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "PODOFORD 100 DRY SUS"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "PODOFORD 50 DRY SUS"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "RANIBEST INJ 2ML"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BHARAVI PHARMACEUTICALS LTD",
+      "name": "BESTACID 170ML SYP (ORG)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BHARAVI PHARMACEUTICALS LTD",
+      "name": "BESTACID SYP (M) 170ML"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BHARAVI PHARMACEUTICALS LTD",
+      "name": "BESTOPARA DS SYP"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BHARAVI PHARMACEUTICALS LTD",
+      "name": "BESTOREX-DX"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIOLOGICAL E. LIMITED",
+      "name": "CHLORHEXIDINE GAUZE DRESSING (BACTIGRAS)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIOLOGICAL E. LIMITED",
+      "name": "CHLORHEXIDINE GAUZE DRESSING (BACTIGRAS)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIOZEN HEALTHCARE",
+      "name": "SOUMO GOLD TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "ABD PAD(ABDOMINAL PAD) 25X40"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "BIPSODINE 5% 500ML"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "BIPSODINE PLUS 10% 500ML"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "CANNULA FIXATOR (BIPSONS)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "CREP BANDAGE ELASTIC 10CM (BIPSONS)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "CREP BANDAGE ELASTIC 10CM (BIPSONS)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "CREP BANDAGE ELASTIC 8CM (BIPSONS)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "CREP BANDAGE ELASTIC 8CM (BIPSONS)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "ELASTIC ADHE. 10CMX4/6CM"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "GAMJEE ROLL 10CMX2.5MTR"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "GAMJEE ROLL 10CMX2.5MTR"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "GAMJEE ROLL 15CMX2.5M"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "GAUZE SWAB 5X5CM"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "GAUZE SWAB 7.5X7.5CM"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "GERMINOL (ANTISEPTIC LIQUID 1000ML"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "PAPER TAP (BIPPORE) 1.25CMX9"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "PAPER TAP (BIPPORE)2.5CMX9M 1\""
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "PLASTER OF PARIS 10X2.7M (BIPSON)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "PLASTER OF PARIS 15X2.7M (BIPSON)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "SOFT ROLL 10 CM (BIPSON)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "SOFT ROLL 10 CM (BIPSON)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "SOFT ROLL 15 CM (BIPSON)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "SOFT ROLL 15 CM (BIPSON)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BITTU PHARMACEUTICALS",
+      "name": "DEXAMETHASONE TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BITTU PHARMACEUTICALS",
+      "name": "FAMOTIDINE TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BITTU PHARMACEUTICALS",
+      "name": "IBUPROFEN 200MG TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BITTU PHARMACEUTICALS",
+      "name": "OMEPRAZOLE 20MG CAPSUL"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BITTU PHARMACEUTICALS",
+      "name": "PARACETAMOL 500MG (R)"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BLAIR REMEDIES PVT LTD",
+      "name": "APPLE CIDER VINEGAR TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BLAIR REMEDIES PVT LTD",
+      "name": "APPLE CIDER VINEGAR TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BLAIR REMEDIES PVT LTD",
+      "name": "THICORT-12 TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BLAIR REMEDIES PVT LTD",
+      "name": "TOFAHIT-5 TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BRACECON",
+      "name": "BR COMMODE CHAIR"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BRACECON",
+      "name": "BR QUADRIPOD MS"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BRACECON",
+      "name": "BR SINGAL STICK MS"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BRACECON",
+      "name": "BR STOOL ROUND PIPE"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BRACECON",
+      "name": "BR TRIPOD STICK"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BRACECON",
+      "name": "BR WALKER"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BRACECON",
+      "name": "BR WRIST BRACE WITH THUM"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BRETT LIFE SCIENCES",
+      "name": "BREBIOTIC CAP"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BRETT LIFE SCIENCES",
+      "name": "BREBIOTIC CAP"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "ALKOF + 100ML SYP"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "AZICIP 250 TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "BURN HEAL CREAM 15GM"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CETCIP SYP"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CETCIP TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CETCIP TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CHESTON COLD SYP 60ML"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CHESTON COLD TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CIP-ZOX TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CIPCAL - 500 TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CIPCAL 150ML SYP"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CIPLADINE GARGLE 100ML"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CIPLADINE OINT 125GM"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CIPLADINE POWDER"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CIPZEN-D TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "COFDEX 100ML SYP"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "DEXACIP INJ 2ML"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "FLUKA-150 TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "IBUGESIC SUSP"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "LEVOQUIN-500 TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "MOVEXX SP TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "NICIP PLUS TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "OKACET TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "OMNI HOT GEL"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "OMNICLAV 625 TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "OMNIGEL 10GM"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "ORS PROLYTE JEERA"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "PANTODEC-D TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "PANTOSEC-40 TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "REACTIN 50 TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "REACTINE 50MG TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "SPASMONIL TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "SPASMONIL TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "SPASMONIL TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "VERTIRON TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "VITAFOL TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "VOMISTOP TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "ADULT DIPAR PANT (L)"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "ADULT DIPER PANT (M)"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "ADULT DIPER PANT (XL)"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "CIPLADINE OINT 25 GM"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "CIPLADINE OINT 30 GM"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "CIPLADINE OINT 30 GM"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "CLOCIP-B 10GM CREAM"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "CLOCIP-B 10GM CREAM"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "COFSIL GENGERLEMON JAR"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "HAIR REMOVAL CREAM (FOR NORMAL SKIN)"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "HAIR REMOVAL CREAM (FOR SENSITIVE SKIN)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "KNEE CAP (ACTISMART) M"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "KNEE CAP (ACTISMART) M"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "KNEE CAP (ACTISMART) S"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "LUMBO SACRAL BELT - (ACTISMART) M"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "LUMBO SACRAL BELT- (ACTISMART) L"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "LUMBO SACRAL BELT- (ACTISMART) L"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "LUMBO SACRAL BELT- (ACTISMART) S"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "OMNIGEL ACTIVE 4GM"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "OMNIGEL ACTIVE ROLL-ON 45ML"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "OMNIGEL SPRAY 20GM"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "ORS PROLYTE APPLE"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "ORS PROLYTE BLACK CURRANT"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "ORS PROLYTE LITCHI"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "ORS PROLYTE MIXED FRUIT"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "ORS PROLYTE ORANG"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "WRIST SUPPORT WITH THUMB- (ACTISMART)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "WRIST SUPPORT WITH THUMB- (ACTISMART)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DANISHHEALTHCARE",
+      "name": "CYPROHEPTADINE TAB"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DANISHHEALTHCARE",
+      "name": "PDLONE 5 MG TAB"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DANISHHEALTHCARE",
+      "name": "PRIMONT-N"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DANO VACCINES & BIOLOGICALS PVT. LTD",
+      "name": "T.T AMPOULES 0.5ML (DANO)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DEE-PHARMA",
+      "name": "OEF OZ TAB"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "CALVIZA PLUS TAB"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "FINOR 1 TAB"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "LOT-O-HAIR CAP"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "LOT-O-HAIR CONDITIONER"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "LOT-O-HAIR SERUM 100ML"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "LOT-O-HAIR SERUM 100ML"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "LULINIX 30GM CREAM"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "MEZONE CREAM 20GM"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "MINOXIFIN F 5% SOLUTION"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "MUPIZEST OINT 10GM"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "OLIZEX OINT 10GM"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "PERMEX CREAM 30GM"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "PERMEX LOTION 60ML"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "UVCOVER GEL"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "ZESTFINE CREAM 10GM"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DIGION",
+      "name": "DIGION DIGITAL THEMOMETER"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DIGITAL",
+      "name": "DIGITAL WRIST BP APP BC-30"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DISKPORT",
+      "name": "RL 250ML DISKPORT"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DISPOVAN",
+      "name": "DISPOVAN NEEDLE NO. 24"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DLR",
+      "name": "EXAMINATION GLOVES (L)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DLR",
+      "name": "EXAMINATION GLOVES (M)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DLR",
+      "name": "EXAMINATION GLOVES (S)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DLR LIFECARE",
+      "name": "GAUZE SWAB 5X5CM (CURETEX DLR)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DLR LIFECARE",
+      "name": "IV SET (ECONOMY)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DR MOREPEN",
+      "name": "GLUCO ONE BG-03 STRIPS 50"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DWD PHARMACEUTICALS LTD",
+      "name": "CORIZ 200 SUS"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "EASYCARE",
+      "name": "THERMOMETER OVAL(EASY CARE)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "ELDER",
+      "name": "MEFIC-SPAS TAB"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "ELDER",
+      "name": "MENTELEC LC SYP"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "ESSITY",
+      "name": "LEUKOPLAST 3\" X 9MTR(7.5CM)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "ESSITY",
+      "name": "LEUKOPLAST 3\" X 9MTR(7.5CM)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "ESSITY",
+      "name": "LEUKOPLAST 3\" X 9MTR(7.5CM)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "ESSITY",
+      "name": "LEUKOPLAST 4\" X 9MTR(10CM)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "FLATPORT",
+      "name": "DNS 500ML FLATPORT"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "FLATPORT",
+      "name": "DNS 500ML FLATPORT"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "FLATPORT",
+      "name": "RL 500ML FLATPORT"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BE KNEE CAP 3D (S)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BE KNEE CAP 3D (XL)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR ABDOMINAL BELT (L)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR ABDOMINAL BELT (M)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR ABDOMINAL BELT (S)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR ABDOMINAL BELT (XL)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR ANKLET WITH BINDER"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR ANKLET WITH BINDER (L)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR ARM POUCH (XL)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR CLAVICLE BRACE (L)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR CLAVICLE BRACE (M)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR CREPE BANDAG (BOX) 7.5CM"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR CREPE BANDAG (JAR) 15CM"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR CREPE BANDAG 5CM"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR CREPE BANDAGE (JAR) 10CM"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR CREPE BANDAGE (JAR) 6CM"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR CREPE BANDAGE (JAR) 8CM"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR ELBOW BRACE (S)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR KNEE CAP (3XL)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR KNEE CAP (S)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR KNEE CAP (XL)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR KNEE CAP (XXL)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR KNEE CAP 3D (M)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR KNEE CAP 3D L"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR L.S. BELT (L)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR L.S. BELT (S)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR L.S. BELT (XL)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR RIB BELT"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "KINESIOLOGY TAPE 5CM"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "NEBULIZER MACHINE (NEBON)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "GARIMA HEALTHCARE PVT LTD.",
+      "name": "ENEMA B.P."
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "GENEX",
+      "name": "WALL MOUNTING COMMMODE STOOL-7003"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "GLENMARK",
+      "name": "ASCODEX LS 100ML"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "GLENMARK",
+      "name": "MIFER FORT TAB"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "GLENMARK",
+      "name": "MIFER PLUS DS 60ML"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "GYPSONA",
+      "name": "PLASTER OF PARIS (GYPSONA) 10CM"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "GYPSONA",
+      "name": "PLASTER OF PARIS (GYPSONA) 15CM"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "HMD",
+      "name": "SCALP VEIN NO 22"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "HMD",
+      "name": "SCALP VEIN NO 22"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "HMD",
+      "name": "SCALP VEIN NO 22"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "HMD",
+      "name": "SCALP VEIN NO 22"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "HOPECURE LIFECARE DEVICES",
+      "name": "ONE PRICK 3ML SYRING"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "HOPECURE LIFECARE DEVICES",
+      "name": "ONE PRICK 5ML SYRING"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "HY-CHEM",
+      "name": "SPIRIT SURGICAL (HY-CHEM)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "IGNITE MEDIPLUS INDUSTRIES",
+      "name": "NEBULIZER MASK (ADULT)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "IGNITE MEDIPLUS INDUSTRIES",
+      "name": "NEBULIZER MASK (PEDIATRIC)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INFERA HEALTHCARE",
+      "name": "LERAFRESH MOUTHWASH 100ML"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INFINITIVE PHARMACEUTICAL INDUSTRIS",
+      "name": "ZOLE TAB(FURAZOLIDINE)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INNOVATOU INNOVACARE",
+      "name": "MASK"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INNOVATOU INNOVACARE",
+      "name": "SKIN BLADE/PREP RAZOR"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INTAS",
+      "name": "ABD SUSPENTION"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INTAS",
+      "name": "CALCITAS-D3 CAP"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INTAS",
+      "name": "FCN-200 TAB"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INTAS",
+      "name": "MINTAGESIC-P 60ML SYP"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INTAS",
+      "name": "NIMUCET-MF SYP 60ML"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INTAS",
+      "name": "OFLOTAS IV 100ML (OFLOXACIN)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INTAS",
+      "name": "ONDET INJ 2ML"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INTAS",
+      "name": "ONDET INJ 2ML"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INTAS",
+      "name": "ONDET-MD TAB"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "JMS",
+      "name": "IV SET JMS"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "JMS",
+      "name": "PAPER TAP JSM 2\""
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "JMS",
+      "name": "PAPER TAP JSM 2\""
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "JMS",
+      "name": "PAPER TAPE 1/2\" JMS"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "K-LIFE",
+      "name": "DIGITAL THERMOMETER DT01-B"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "K-LIFE",
+      "name": "DIGITAL THERMOMETER DT01-B"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "K. B. PRODUCTS",
+      "name": "HYDROGEN PEROXIDE (KB) 100ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "KLOKTER HRALTHCARE PVT LTD",
+      "name": "AXYCLO-PLUS TAB"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LABORATE",
+      "name": "CEFLOX EYE/EAR DROPS"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LABORATE",
+      "name": "CEFLOX EYE/EAR DROPS"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LABORATE",
+      "name": "CEFLOX-DEE DROP"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LABORATE",
+      "name": "CEFLOX-DEE DROP"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LABORATE",
+      "name": "FESTIVE DROP"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LABORATE",
+      "name": "FESTIVE DROP"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LABORATE",
+      "name": "HUNGREE SYP (ELACHI)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LABORATE",
+      "name": "HUNGREE SYP (MANGO)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LABORATE",
+      "name": "HUNGREE SYP 200ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LABORATE PHARMACEUTICAL INDI PVT LT",
+      "name": "DHUNGREE SYP (ORANGE)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LABORATE PHARMACEUTICAL INDI PVT LT",
+      "name": "DHUNGREE SYP (PINEAPPLE)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LANARK LABORATORIS",
+      "name": "AXYCLO-SR PLUS TAB"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LANARK LABORATORIS",
+      "name": "LEXOZEN TAB"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LATEX",
+      "name": "ADHESIVE TAPE 4\" (ORTHO)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LEEFORD",
+      "name": "DERMIFORD CREAM"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LEEFORD",
+      "name": "ITROSTRED-TF CREAM"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LEEFORD",
+      "name": "KETOFORD CREAM 15 GM"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LEEFORD",
+      "name": "KETOFORD CREAM 15 GM"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LEEFORD",
+      "name": "MIGRAFEN TAB"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LEEFORD",
+      "name": "TENACID-MF TAB"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LEEFORD",
+      "name": "VERTIFORD-16 TAB"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LIFE CARE PHARMACEUTICALE PVT LTD",
+      "name": "AMIKACIN 500MG 2ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LIFE CARE PHARMACEUTICALE PVT LTD",
+      "name": "DNS 500ML (CLEANPORT)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MACLEODS",
+      "name": "LEVOGRAM SYP (LEVOCETRIZINE)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MACLEODS",
+      "name": "MACPRED 40 MG INJ"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MACLEODS",
+      "name": "ZENTICROSS 400MG TAB"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MAMTA SPINNERS ABSORBENT",
+      "name": "COTTON ROLL 100 GM(MAMTA ABSORBENT)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MAMTA SPINNERS ABSORBENT",
+      "name": "COTTON ROLL 200 GM (MAMTA ABSORBENT)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MAMTA SPINNERS ABSORBENT",
+      "name": "COTTON ROLL 20GM (MAMTA ABSORBENT)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MAMTA SPINNERS ABSORBENT",
+      "name": "COTTON ROLL 400GM (MAMTA ABSORBENT)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MAMTA SPINNERS ABSORBENT",
+      "name": "COTTON ROLL 400GM (MAMTA ABSORBENT)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MAMTA SPINNERS ABSORBENT",
+      "name": "COTTON ROLL 50 GM (MAMTA ABSORBENT)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MANCARE HEALTHCARE PVT. LTD",
+      "name": "MAGNAKOF-LS 100ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MANCARE HEALTHCARE PVT. LTD",
+      "name": "TERBIMAN 250 TAB"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MANKIND PRIME LABS PVT LTD",
+      "name": "BIFIBLESS TAB(PRE & PROBIOTIC) CAP"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MANKIND PRIME LABS PVT LTD",
+      "name": "PARAKIND 125MG SYP"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MD",
+      "name": "COTTON BANDAGE 2\" (MD)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MD",
+      "name": "COTTON BANDAGE 3\" (MD)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MD",
+      "name": "COTTON BANDAGE 4\" (MD)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MD",
+      "name": "COTTON BANDAGE 6\" (MD)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MD",
+      "name": "COTTON ROLL 100GM"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MD",
+      "name": "COTTON ROLL 10GM"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MD",
+      "name": "COTTON ROLL 20 GM"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MD",
+      "name": "COTTON ROLL 50GM"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MEDICARE",
+      "name": "CANNULA FIXATOR (MEDICARE)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MEDRIX LABS LVT LTD",
+      "name": "CLINWAY GEL 15 GM"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MEDRIX LABS LVT LTD",
+      "name": "HB PUMP XT TAB"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MEDWIN BIOTECH",
+      "name": "MEDI-MVI (MULTIVITAMIN ) INJ 10ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "CALVIT INJ 30ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "CHLORPHENIRAMINE MELEATE INJ 30ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "CYCLOLIN-M INJ 30ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "CYNOVIT INJ"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "CYNOVIT INJ"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "MERCIN-75 INJ 30ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "ONDANSETRON INJ 30ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "ONDASETRON 30ML INJ"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "PHENARAMINE MELEATE INJ"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "PHENIRAMINE MALEATE INJ 30ML"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "WEMYCIN INJ 30ML"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "WEMYCIN INJ 30ML"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "WEXOL INJ 20ML"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "APRESS-5 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "APRESS-AT TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "ASIMIC-FORTE TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "ASIMIC-MR TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "ASIMIC-PT4 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "ASIMIC-T4 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "AZITOMIC-250 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "AZITOMIC-500 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "BEFEN-10 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "BEFEN-10 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "CEFMIC-CV TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "CEFMIC-CV TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "CEFPOD-200 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "CEFPOD-200 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "CHESMIC COLD TOTAL TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "D-PROTIMIC POWDER"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "D-PROTIMIC POWDER (CHOCOLATE)"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "DEFLAMIC -6 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "DERIMIC RETARD-150 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "ESMOZ-40 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "ESMOZ-DSR CAP"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "ETORIC-60 TH"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "GLOWELL SKIN SHINE CREAM"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "ITRAMIC-100 CAP"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "ITRAMIC-100 CAP"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "MECOGOLD PLUS CAP"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "MONTEMIC -LC TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "NERVOMIC FORTE TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "NERVOMIC FORTE TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "PANTAMIC-40 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "PANTAMIC-D TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "PLATOMIC TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "PREGAMIC-M CAP"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "RABIMIC-DSR"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "SUNVITAL SOFTGEL CAP"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "TELMIZ-40H TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "VITAMIN-E (MICROLIFE) CAP"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROPORE",
+      "name": "PAPER TAP MICROPORE 2\""
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MODI LIFECARE INDUSTRIES LTD",
+      "name": "ACECLOR-F TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MODI LIFECARE INDUSTRIES LTD",
+      "name": "ACIPLEX CAP (B-COMPLEX )"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MODI LIFECARE INDUSTRIES LTD",
+      "name": "ACIPLEX CAP (B-COMPLEX )"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MODI LIFECARE INDUSTRIES LTD",
+      "name": "CLOFEM + TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MODI LIFECARE INDUSTRIES LTD",
+      "name": "DEXSON-5 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MODI LIFECARE INDUSTRIES LTD",
+      "name": "DIFENAC-F TAB (DICLO)"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MRK HEALTHCARE PVT LTD",
+      "name": "HAND GLOES NO. 7 (NULIFE)"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "NEON",
+      "name": "LOX-2% 30ML INJ"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "NEON",
+      "name": "LOX-2% 30ML INJ"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "NICHEPHARMA LIFESCIENCES PRIVET LIMI",
+      "name": "TNEEDUROBION FORTE INJ 2ML"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "NICHEPHARMA LIFESCIENCES PRIVET LIMI",
+      "name": "TNEEDUROBION FORTE INJ 2ML"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "NIPRO",
+      "name": "NIPRO 2ML SYRING"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "NLERA HEALTHCARE",
+      "name": "VOY-D3 SACHETS"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "NLERA HEALTHCARE",
+      "name": "VOY-D3 SACHETS"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "NLERA HEALTHCARE",
+      "name": "VOY-D3 SACHETS"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "NUORTHO WELLNBESS LLP",
+      "name": "NEOPRENE HINGER WARP M"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "ODIN",
+      "name": "THERMAMETER DIGI"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "OMEGA BIOTECH",
+      "name": "ERYTHRO-500 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "OMEGA BIOTECH",
+      "name": "METROGA TAB 400"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "OMEGA PHARTMA",
+      "name": "COTRIMOXAZOLE D.S. TAB"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "OMEGA PHARTMA",
+      "name": "DEXA TAB"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "OMRON",
+      "name": "BP MONITOR 7121-J"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "ONEDRIP",
+      "name": "RL 500ML ONEDRIP"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "ORTHO",
+      "name": "ADHESIVE TAPE 2\""
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "PARAS",
+      "name": "PARAS SYRING 2ML"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "PARAS",
+      "name": "PARAS SYRING 5ML"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "PENTA PHARMACEUTICALS",
+      "name": "P-CET TAB (CETRIZINE)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "PENTA PHARMACEUTICALS",
+      "name": "PENTAPLEX PLUS TAB"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "PION",
+      "name": "BP HANDLE NO. 04"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "BLOOD SET (POLY)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "BLOOD SET (POLY)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "I.V SET (POLYMED)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "NOUVO CLICK EXT 45, 10 CM"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "POLYCATH 3WAY20"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "POLYFLON-20G"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "POLYFLON-22G"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "POLYNEO IV CAN. 24"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "POLYNEO IV CAN. 24"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "POLYWAY THREE WAY (POLY)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "POLYWAY THREE WAY (POLY)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "RYLES TUBE-08 FG(POLYMED)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "RYLES TUBE-12 FG(POLYMED)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "RYLES TUBE-14 FG(POLYMED)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "SUCTION CATH-12"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "SUCTION CATH-14"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "SUCTION CATH-16"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "URIN BAG (POLY)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "PUNISKA",
+      "name": "D5 250ML PSK"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "PUNISKA",
+      "name": "RL 250ML PSK"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RANBAXY",
+      "name": "ALFAKIM 250MG INJ"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RANBAXY",
+      "name": "ALFAKIM 500MG INJ 2ML"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RAXON BIOMEDICAL",
+      "name": "SKIN STAPLER RAXSTAP"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "REALCAD",
+      "name": "D25 100ML (REALCADE)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "REALCAD",
+      "name": "D5 500ML REALCADE"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "REALCAD",
+      "name": "DNS 500ML REALCADE"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "REALCAD",
+      "name": "METRO I.V (REALCADE)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "REALCAD",
+      "name": "NS 100ML REALCADE"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "REALCAD",
+      "name": "NS 500ML REALCADE"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "REALCAD",
+      "name": "NS 500ML REALCADE"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "REALCAD",
+      "name": "RL 500ML REALCADE"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "ALLERKEY-M KID SYRUP"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "ALLERKEY-M TAB"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "CAZIREL-K27 TAB"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "CAZIREL-K27 TAB"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "CAZIREL-K27 TAB"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "CAZIREL-K27 TAB"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "KEY CHAINS"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "KEY CHAINS"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "KEY CHAINS"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "LILI-REL CREAM"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "LILI-REL CREAM"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "NANDROL-25 INJ"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "NANDROL-D INJ"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "NANDROL-D INJ"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "NOTEPAD HRS"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "NOTEPAD HRS"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "NOTEPAD HRS"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "NOTEPAD HRS"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "NOTEPAD HRS"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "NUROPREG-OD CAP"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "PEN"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "PEN"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "PEN"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "PEN"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "PLATREL CAP"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "PLATREL CAP"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "PLATREL CAP"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "PLATREL CAP"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "PLATREL CAP"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "PLATREL CAP"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "PLATREL CAP"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "REAMOXY-CV 625 LB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "RELTEK-MR TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "RELTEK-MR TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "RELTEK-SP TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "RELTEK-SP TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "RELTEK-SP TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "RELTEK-SP TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "RELTEK-SP TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "RELTEK-TH4 TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "RELYCOFRESH-M SOFTGEL"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "RELYCOFRESH-M SOFTGEL"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "REXACINZOLE CREAM"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "REXACINZOLE CREAM"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RHOMBUS PHARMA PRIVATE LIMITED",
+      "name": "RHINCAL-XT TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "ROYAL SURGICARE PVT LTD",
+      "name": "BLOOD SET (ROYAL)"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RPG LIFE SCIENCES",
+      "name": "RABIARPI-DSR CAP"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SAACHI MEDIC",
+      "name": "EXAMINATION GLOVES (SAFE TOUCH) S"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SAINT MICHAEL BIOTECH",
+      "name": "DEEMOL-500 TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SANOFI",
+      "name": "AVIL INJ 2ML"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SHINOM COSMECEUTICALS",
+      "name": "FUTIEASE-30 CREAM"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SHINOM COSMECEUTICALS",
+      "name": "FUTIEASE-M CREAM"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SHINOM COSMECEUTICALS",
+      "name": "ITOFIL-65 SB CAP"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SHINOM COSMECEUTICALS",
+      "name": "ITOFIL-65 SB CAP"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SHINOM COSMECEUTICALS",
+      "name": "ITROFIL-130 SB CAP"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SHINOM COSMECEUTICALS",
+      "name": "SHIMTER-M CREAM"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SKKL",
+      "name": "D5% 500ML (SKKL)"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SKKL",
+      "name": "DNS 500ML DISKPORT"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SKKL",
+      "name": "METRO I.V (SKKL)"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SKKL",
+      "name": "METRO I.V (SKKL)"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SKKL",
+      "name": "NS 100ML SKKL"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SKKL",
+      "name": "NS 500ML DISKPORT"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SKKL",
+      "name": "NS 500ML DISKPORT"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SKKL",
+      "name": "RL SKKL 500ML"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "ACESUN COLD & FLU TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "ACEZOX-MR TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "ALBESUN 10ML SUS"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "ALLZVIT TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "ALOSOFT SOAP 75GM"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "AXODRIL-DX TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "AXODRIL-LS JUNIOR 60ML SYP"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "AZISUN-250 TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "BESULE CAPSULES"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "CANDISUN CREAM 15 GM"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "CANDISUN-B CREAM 15 GM"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "COLBATE -GM OINT"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "COLDFREE CAP"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "COLSUN-500 TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "COLSUN-500 TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "COLSUN-650 TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "COLSUN-650 TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "COMBISUN 60ML SYP"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "COMBISUN 60ML SYP"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "DICLOSUN AQUA INJ 1ML"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "DULAX TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "FERR-RED SYP 200ML"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "FLOXNOR-400 TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "FLOXNOR-400 TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "GO CRACK CREAM 10GM"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "HUM UP 200ML SYP"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "LEOCET-M SYP 60ML"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "LEOCET-M SYP 60ML"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "MEFESPAS PLUS 60ML SYP"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "MEFESPAS TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "MONTAC-D TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "MOXNOVA-CV 625 LB TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "NIMZY COLD & FLU TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "NORSUN-TZ TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "NORSUN-TZ TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "NYZIP PLUS TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "OMZED 20 CAP"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "PENTASUN-40 TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "POVISUN OINT 10GM"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "POVISUN OINT 15 GM"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "RABISUN-20 TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "RABISUN-DSR CAP"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "REXSUN-DX 100ML SYP"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "SPASOSUN CAP"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "SUCEE TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "SUNCEF (CEFTRIAXONE ) INJ 1 G"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "SUNCOF MINT 100ML SYP"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "TQ TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "TRYZYME 200ML SYP"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "ZEDCET 60ML SYP (CETIRIZINE)"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "ZEDCET 60ML SYP (CETIRIZINE)"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "ZEMSOFIT TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "ZIMCOFIT SYP 200ML"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "ZONE-F OINT 15GM"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE SCIENCES LVT LTD",
+      "name": "ACEPEP-SP(BLUE) TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE SCIENCES LVT LTD",
+      "name": "ACEPEP-SP(GOLD) TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE SCIENCES LVT LTD",
+      "name": "ACEPEP-SP(GOLD) TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE SCIENCES LVT LTD",
+      "name": "ACEPEP-SP(SILVER) TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE SCIENCES LVT LTD",
+      "name": "COMBITAB (SILVER)"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE SCIENCES LVT LTD",
+      "name": "CYCLOPLUS TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE SCIENCES LVT LTD",
+      "name": "OMFLOX-OZ TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE SCIENCES LVT LTD",
+      "name": "OMFLOX-OZ TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE SCIENCES LVT LTD",
+      "name": "ULTRASUN TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SURGI-SAFE",
+      "name": "EXAMINATION GLOVES (SURGI SAFE) EXTRA S"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SVAS ENTERPRISES",
+      "name": "HYDROGEN PEROXIDE (SVAS) 450ML"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TARA",
+      "name": "NS 100ML (TARA)"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TELEFLEX MEDICAL PRAIVATE LTD",
+      "name": "RUSCH FOLEY CATH NO 14"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TELEFLEX MEDICAL PRAIVATE LTD",
+      "name": "RUSCH FOLEY CATH NO 18"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TELEFLEX MEDICAL PRAIVATE LTD",
+      "name": "RUSCH FOLRY CATH NO 12"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TOP",
+      "name": "SCALP VAIN SET NO 22 (TOP)"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TOP",
+      "name": "SCALP VAIN SET NO 22 (TOP)"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TOP",
+      "name": "SCALP VAIN SET NO 23 (TOP)"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TORRENT PHARMA",
+      "name": "ACYCLOSURE TH 4 TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TORRENT PHARMA",
+      "name": "TOPCEF-200 TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TRASPORT",
+      "name": "ADD FREIGHT"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TRASPORT",
+      "name": "ADD FREIGHT"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TRASPORT",
+      "name": "ADD FREIGHT"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TRASPORT",
+      "name": "ADD FREIGHT"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TRASPORT",
+      "name": "ADD FREIGHT"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "ADD FREIGHT"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "ADD FREIGHT"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "ADD FREIGHT"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "ADD FREIGHT"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "ADD FREIGHT"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "ADD FREIGHT"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "ADD FREIGHT"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "ADD FREIGHT"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "ADD FREIGHT"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "TRANSIT INSURANCE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "TRANSIT INSURANCE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "TRANSIT INSURANCE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "TRANSIT INSURANCE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "TRANSIT INSURANCE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "TRANSIT INSURANCE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "TRANSIT INSURANCE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "TRANSIT INSURANCE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "TRANSIT INSURANCE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "TRANSIT INSURANCE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "TRANSIT INSURANCE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "TRANSIT INSURANCE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "TRANSIT INSURANCE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "TRANSIT INSURANCE."
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "TRANSIT INSURANCE."
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "UNIVENTIS MEDICARE LTD",
+      "name": "OFTIROL-200 TAB"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "UNIVERSAL LIFE SCIENCE",
+      "name": "CLOZOTIC EAR DROP"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "UNIVERSAL LIFE SCIENCE",
+      "name": "ORAL-L TAB"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "UNIVERSAL LIFE SCIENCE",
+      "name": "OTOGIC EAR DROPS"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "UNIVERSAL LIFE SCIENCE",
+      "name": "SOLERWAX DROP"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "UNIVERSAL TWIN LABS",
+      "name": "CLINCITOP GEL 20GM"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "UNIVERSAL TWIN LABS",
+      "name": "DERMI 5 OIN"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "UNIVERSAL TWIN LABS",
+      "name": "SMILOGEL 10 GM"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "UNIVERSAL TWIN LABS",
+      "name": "SMILOGEL 10 GM"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "V.L. PRODUCTS",
+      "name": "HYDROGEN PEROXIDE 100ML"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "V.L. PRODUCTS",
+      "name": "HYDROGEN PEROXIDE 100ML"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "V.L. PRODUCTS",
+      "name": "HYDROGEN PEROXIDE 100ML"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "VDS LIFE CARE LLP",
+      "name": "PREP RAZOR"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "VDS LIFE CARE LLP",
+      "name": "SURGICAL BLADE NO. 11"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "VISSCO",
+      "name": "KNEE CAP VISSCO M"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "VISSCO",
+      "name": "KNEE CAP VISSCO S"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "VISSCO",
+      "name": "VISSCO L.S. BELT (XL)"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "WALLACE",
+      "name": "LEVCAM-500 TAB"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "WILSON TAPES PVT LTD",
+      "name": "EYE PAD"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "WOCKHARDT",
+      "name": "ACCECLOWOC-P TAB"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE",
+      "name": "D5% 500ML ZEE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE",
+      "name": "D5% 500ML ZEE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE",
+      "name": "DNS 500ML ZEE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE",
+      "name": "NS 500ML ZEE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "ACNELITE BAR SOAP"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "ACNEZEST EC FASE WASH 100GM"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "ACNEZEST-EC FACE WASH 200ML"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "ALOFFEL SKIN GEL 100GM"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "AXYMOX-CL625 TAB"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "BECEVIT TAB"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "CALAZEST LOTION 60GM"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "CLEAR EYE CREAM"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "CLOBIZIN CREAM 30GM"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "CLOBIZIN-SL 15GM CREAM"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "DERMITAR LOTION 100ML"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "DOXIZEST-100LB TAB"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "ELWYFLOX-200 TAB"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "FUSINICE CREAM 10GM"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "FUSINICE-B 10G"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "FUSINICE-M CREAM 10GM"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "HYLEXIT 10 TAB"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "HYLEXIT 100 ML SYP"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "HYLEXIT 25 TAB"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "HYLEXIT DROPS"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "ITRAVIN CAP 100MG"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "ITRAVIN CAP 200MG"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "KETONICE CREAM 30GM"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "KETONICE SHAMPOO 100ML"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "KETONICE SOAP 75GM"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "KLINTEL GEL 30GM"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "KLINTEL-300 CAP"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "LOT-O-HAIR SHAMPOO"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "PERMEX SOAP"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "SOFZEL EMMOLIENT 200ML"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "TERBIZEST-250 TAB"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "TRETLIX-CREAM 30GM"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "UVILITE CREAM"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "WELOCIP 500MG"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "WELOCIP 500MG"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "ZESTGLOW CREAM"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEN PHARMA",
+      "name": "OPTINEURON FORTE ING 3ML"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZUVNTUS",
+      "name": "NEXDOL 100MG INJ"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZUVNTUS",
+      "name": "ZUVENDINE SOLUTION"
+    }
+  ],
+  "products": [
+    {
+      "sourcePage": 1,
+      "manufacturer": "ABBOTT",
+      "name": "AMOXYCLAV INJ 1.2GM"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ABBOTT",
+      "name": "C ONE SB 1.5GM INJ"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ABBOTT",
+      "name": "HYDROCORT INJ 100MG"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AKHIL IMPEX",
+      "name": "ELBIOVIT-12 INJ"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALCOLABS",
+      "name": "ACTOZOL-B LOTION"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALCOLABS",
+      "name": "CANDICRUSH SB 130 CAP"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALCOLABS",
+      "name": "CANDICRUSH SB 65 CAP"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALCOSMA",
+      "name": "ALCOMET CREAM 10GM"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALCOSMA",
+      "name": "COSNOIN-20 SOFTGEL CAP"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALCOSMA",
+      "name": "LUZIC LOTION 30ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALEMBIC",
+      "name": "AGINAL AT TAB"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALKOF (ORANGE)"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALKOF + SYP 60ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALKOF COFGELS"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALKOF COLD & FLU TAB"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALKOF JUNIOR SYP 60ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALKOF(ORANG) SYP 60ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALKOF-DX 100ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALMOX 500M CAP"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "ALMOX DT 250 TAB"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "DERMIKEM OC"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "KEMPHYLLINE (ETOHYLL& THEOPHYLL) INJ"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "OMEE CAP"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "PREGAKEM CARD"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM",
+      "name": "SUMO GEL 30 GM"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ALKEM WELLNESS LIMITED",
+      "name": "KOFCLEAR-LS JUNIOR SYP"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "ADDFRIEGHT"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "BORIC ACID 100GM"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "BORIC ACID 20GM"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "BORIC ACID 50GM"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "COTTON ROLL 10GM (AMAR)"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "COTTON ROLL 20GM(AMAR)"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "COTTON ROLL 400GM (AMAR)"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "EUCALYPTUS OIL (NILGIRI TEL)"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "HOSPIRIT 100ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "HYDROGEN PEROXIDE 400ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "PARAFFIN LIQUID 400ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "POSH PHENYL 4500ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "POVIKNOX 10%"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "POVIKNOX 5%"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMAR PRODUCTS",
+      "name": "TOPLON 100ML(ANTISEPYIC)"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMBITECH",
+      "name": "BP APPARATUS (AMBITECH)"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AMERICAN REMEDIES",
+      "name": "ADRENALINE BITARTRATE INJ"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ANCHOR PHARMA PVT. LTD.",
+      "name": "BISACODYL TAB"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ANGLO-FREANCH DRUGS & INDUSTRIES LI",
+      "name": "MNEITMEODFRENCH-P TAB"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "ANTEX",
+      "name": "DICLOVIS-SP TAB"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AQUA FINE INJECTA PVT. LTD. PUNE",
+      "name": "CALCIUM GLUCONATE 10ML"
+    },
+    {
+      "sourcePage": 1,
+      "manufacturer": "AQUA FINE INJECTA PVT. LTD. PUNE",
+      "name": "SODIUM BICARBONATE INJ"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ARCO PHARMA PVT. LTD",
+      "name": "FOLIC ACID TAB 5.MG"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ARIZZER PHARMACETICALS",
+      "name": "CANRIZE POWDER"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ARUN",
+      "name": "COTTON BANDAGE 2\" (ARUN)"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ARUN",
+      "name": "COTTON BANDAGE 4\" (ARUN) 10X3CM"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ARUN",
+      "name": "COTTON BANDAGE 6\" (ARUN) 15X3MTR"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ARUN PRODUCTS",
+      "name": "COTTON BANDAGE 3\" (ARUN)"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ARUN PRODUCTS",
+      "name": "GAUZE SCH. 18X90CM"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ASHWIN PHARMA",
+      "name": "HYDROGEN PEROXIDE 25ML (ASHWIN)"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ASTRA-IDL LIMITED",
+      "name": "CHYMOCUS FORTE TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ASUWALDI PHARMACEUTICALS",
+      "name": "A-PHYLLIN TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ASUWALDI PHARMACEUTICALS",
+      "name": "ALDOX TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ASUWALDI PHARMACEUTICALS",
+      "name": "HEMOLIDE (PARA+NIMU) TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ASUWALDI PHARMACEUTICALS",
+      "name": "HIMOL-500 TAB(PARACETAMOL)"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ASUWALDI PHARMACEUTICALS",
+      "name": "MET-400 (METRONIDAZOLE) 400MG"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ASUWALDI PHARMACEUTICALS",
+      "name": "ZECET TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ATUL PHARMACEUTICALS",
+      "name": "BETAMETHASONE TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ATUL PHARMACEUTICALS",
+      "name": "BROMHEXINE TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ATUL PHARMACEUTICALS",
+      "name": "C.P.M TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ATUL PHARMACEUTICALS",
+      "name": "METRONIDAZOLE TAB- 200 TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ATUL PHARMACEUTICALS",
+      "name": "NIMESULIDE TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "ATUL PHARMACEUTICALS",
+      "name": "SALBUTAMOL TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "AXYZEN LIFSCIENCES",
+      "name": "ANTICO DMR CAP"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "AXYZEN LIFSCIENCES",
+      "name": "AXYCEE-500 TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "AXYZEN LIFSCIENCES",
+      "name": "AXYDEC 50 INJ"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "AXYZEN LIFSCIENCES",
+      "name": "AXYPENT DM TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "AXYZEN LIFSCIENCES",
+      "name": "AXYPENT TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "AXYZEN LIFSCIENCES",
+      "name": "PARAXEN 650 TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD DISCARDIT 10ML"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD DISCARDIT 20ML"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD DISCARDIT 2ML"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD DISCARDIT 5ML"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD NEEDLE NO 18G 1 1/2"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD NEEDLE NO 23"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD NEEDLE NO 24"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD SPINAL NEEDLE NO. 23"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD ULTRA-FINE II NEEDLE INDULIN SYRINGS U-40"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BD",
+      "name": "BD ULTRA-FINE PEN NEEDLES"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTO",
+      "name": "CEFIBEST O TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "AARAM OIL"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "ACECLOBEST MR TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "ACECLOBEST PLUS TAB (BLISTER)"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "ACECLOBEST SP TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "ALBANDABEST SYP"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "ALKABEST SYRUP"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "ALPHABEST INJ PAINLESS"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "AMOXYBEST CV 375 TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "AMOXYBEST-CV 1.2GM INJ"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "AMOXYBEST-CV 625 TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "AZELOC 500 TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "BESTOPREG CARD"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "BIGORA 100 TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "CEFIBEST 200 TAB"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "CEFIBEST 50MG DRY SYP"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "CEFTOBEST 1000GM INJ"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "CETRIBEST SYP"
+    },
+    {
+      "sourcePage": 2,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "COLDCOX -DS 100ML SYP"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "COLDCOX LS SYP 100ML"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "COLDCOX-BR 100ML SYP"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "DEFLOACTIVE 6 TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "DICLOBEST 1ML INJ"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "DICLOBEST 3ML INJ"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "FLUCOBEST 200TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "GEMSOBEST CAP 1X10"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "IDOBEST LOTION 500ML"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "IROBEST INJ"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "LC-BEST TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "LULIACTIVE 1% CREAM 30GM"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "MONTIBEST LC SYP"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "OFLOBEST 200 TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "OFLOBEST 200(B/L) TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "OFLOBEST-M SUSP"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "ONDABEST -MD TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "PANTABEST -40 DSR CAP"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "PANTABEST 40 TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "PODOFORD 100 DRY SUS"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "PODOFORD 50 DRY SUS"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BESTOCHEM FORMULATION",
+      "name": "RANIBEST INJ 2ML"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BHARAVI PHARMACEUTICALS LTD",
+      "name": "BESTACID 170ML SYP (ORG)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BHARAVI PHARMACEUTICALS LTD",
+      "name": "BESTACID SYP (M) 170ML"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BHARAVI PHARMACEUTICALS LTD",
+      "name": "BESTOPARA DS SYP"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BHARAVI PHARMACEUTICALS LTD",
+      "name": "BESTOREX-DX"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIOLOGICAL E. LIMITED",
+      "name": "CHLORHEXIDINE GAUZE DRESSING (BACTIGRAS)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIOZEN HEALTHCARE",
+      "name": "SOUMO GOLD TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "ABD PAD(ABDOMINAL PAD) 25X40"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "BIPSODINE 5% 500ML"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "BIPSODINE PLUS 10% 500ML"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "CANNULA FIXATOR (BIPSONS)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "CREP BANDAGE ELASTIC 10CM (BIPSONS)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "CREP BANDAGE ELASTIC 8CM (BIPSONS)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "ELASTIC ADHE. 10CMX4/6CM"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "GAMJEE ROLL 10CMX2.5MTR"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "GAMJEE ROLL 15CMX2.5M"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "GAUZE SWAB 5X5CM"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "GAUZE SWAB 7.5X7.5CM"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "GERMINOL (ANTISEPTIC LIQUID 1000ML"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "PAPER TAP (BIPPORE) 1.25CMX9"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "PAPER TAP (BIPPORE)2.5CMX9M 1\""
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "PLASTER OF PARIS 10X2.7M (BIPSON)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "PLASTER OF PARIS 15X2.7M (BIPSON)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "SOFT ROLL 10 CM (BIPSON)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BIPSON SURGICAL PVT. LTD",
+      "name": "SOFT ROLL 15 CM (BIPSON)"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BITTU PHARMACEUTICALS",
+      "name": "DEXAMETHASONE TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BITTU PHARMACEUTICALS",
+      "name": "FAMOTIDINE TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BITTU PHARMACEUTICALS",
+      "name": "IBUPROFEN 200MG TAB"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BITTU PHARMACEUTICALS",
+      "name": "OMEPRAZOLE 20MG CAPSUL"
+    },
+    {
+      "sourcePage": 3,
+      "manufacturer": "BITTU PHARMACEUTICALS",
+      "name": "PARACETAMOL 500MG (R)"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BLAIR REMEDIES PVT LTD",
+      "name": "APPLE CIDER VINEGAR TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BLAIR REMEDIES PVT LTD",
+      "name": "THICORT-12 TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BLAIR REMEDIES PVT LTD",
+      "name": "TOFAHIT-5 TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BRACECON",
+      "name": "BR COMMODE CHAIR"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BRACECON",
+      "name": "BR QUADRIPOD MS"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BRACECON",
+      "name": "BR SINGAL STICK MS"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BRACECON",
+      "name": "BR STOOL ROUND PIPE"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BRACECON",
+      "name": "BR TRIPOD STICK"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BRACECON",
+      "name": "BR WALKER"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BRACECON",
+      "name": "BR WRIST BRACE WITH THUM"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "BRETT LIFE SCIENCES",
+      "name": "BREBIOTIC CAP"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "ALKOF + 100ML SYP"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "AZICIP 250 TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "BURN HEAL CREAM 15GM"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CETCIP SYP"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CETCIP TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CHESTON COLD SYP 60ML"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CHESTON COLD TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CIP-ZOX TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CIPCAL - 500 TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CIPCAL 150ML SYP"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CIPLADINE GARGLE 100ML"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CIPLADINE OINT 125GM"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CIPLADINE POWDER"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "CIPZEN-D TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "COFDEX 100ML SYP"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "DEXACIP INJ 2ML"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "FLUKA-150 TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "IBUGESIC SUSP"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "LEVOQUIN-500 TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "MOVEXX SP TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "NICIP PLUS TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "OKACET TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "OMNI HOT GEL"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "OMNICLAV 625 TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "OMNIGEL 10GM"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "ORS PROLYTE JEERA"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "PANTODEC-D TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "PANTOSEC-40 TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "REACTIN 50 TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "REACTINE 50MG TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "SPASMONIL TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "VERTIRON TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "VITAFOL TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLA",
+      "name": "VOMISTOP TAB"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "ADULT DIPAR PANT (L)"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "ADULT DIPER PANT (M)"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "ADULT DIPER PANT (XL)"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "CIPLADINE OINT 25 GM"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "CIPLADINE OINT 30 GM"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "CLOCIP-B 10GM CREAM"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "COFSIL GENGERLEMON JAR"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "HAIR REMOVAL CREAM (FOR NORMAL SKIN)"
+    },
+    {
+      "sourcePage": 4,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "HAIR REMOVAL CREAM (FOR SENSITIVE SKIN)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "KNEE CAP (ACTISMART) M"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "KNEE CAP (ACTISMART) S"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "LUMBO SACRAL BELT - (ACTISMART) M"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "LUMBO SACRAL BELT- (ACTISMART) L"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "LUMBO SACRAL BELT- (ACTISMART) S"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "OMNIGEL ACTIVE 4GM"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "OMNIGEL ACTIVE ROLL-ON 45ML"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "OMNIGEL SPRAY 20GM"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "ORS PROLYTE APPLE"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "ORS PROLYTE BLACK CURRANT"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "ORS PROLYTE LITCHI"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "ORS PROLYTE MIXED FRUIT"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "ORS PROLYTE ORANG"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "CIPLAHEALTH",
+      "name": "WRIST SUPPORT WITH THUMB- (ACTISMART)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DANISHHEALTHCARE",
+      "name": "CYPROHEPTADINE TAB"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DANISHHEALTHCARE",
+      "name": "PDLONE 5 MG TAB"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DANISHHEALTHCARE",
+      "name": "PRIMONT-N"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DANO VACCINES & BIOLOGICALS PVT. LTD",
+      "name": "T.T AMPOULES 0.5ML (DANO)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DEE-PHARMA",
+      "name": "OEF OZ TAB"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "CALVIZA PLUS TAB"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "FINOR 1 TAB"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "LOT-O-HAIR CAP"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "LOT-O-HAIR CONDITIONER"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "LOT-O-HAIR SERUM 100ML"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "LULINIX 30GM CREAM"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "MEZONE CREAM 20GM"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "MINOXIFIN F 5% SOLUTION"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "MUPIZEST OINT 10GM"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "OLIZEX OINT 10GM"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "PERMEX CREAM 30GM"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "PERMEX LOTION 60ML"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "UVCOVER GEL"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DERMAZEST",
+      "name": "ZESTFINE CREAM 10GM"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DIGION",
+      "name": "DIGION DIGITAL THEMOMETER"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DIGITAL",
+      "name": "DIGITAL WRIST BP APP BC-30"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DISKPORT",
+      "name": "RL 250ML DISKPORT"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DISPOVAN",
+      "name": "DISPOVAN NEEDLE NO. 24"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DLR",
+      "name": "EXAMINATION GLOVES (L)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DLR",
+      "name": "EXAMINATION GLOVES (M)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DLR",
+      "name": "EXAMINATION GLOVES (S)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DLR LIFECARE",
+      "name": "GAUZE SWAB 5X5CM (CURETEX DLR)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DLR LIFECARE",
+      "name": "IV SET (ECONOMY)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DR MOREPEN",
+      "name": "GLUCO ONE BG-03 STRIPS 50"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "DWD PHARMACEUTICALS LTD",
+      "name": "CORIZ 200 SUS"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "EASYCARE",
+      "name": "THERMOMETER OVAL(EASY CARE)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "ELDER",
+      "name": "MEFIC-SPAS TAB"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "ELDER",
+      "name": "MENTELEC LC SYP"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "ESSITY",
+      "name": "LEUKOPLAST 3\" X 9MTR(7.5CM)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "ESSITY",
+      "name": "LEUKOPLAST 4\" X 9MTR(10CM)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "FLATPORT",
+      "name": "DNS 500ML FLATPORT"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "FLATPORT",
+      "name": "RL 500ML FLATPORT"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BE KNEE CAP 3D (S)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BE KNEE CAP 3D (XL)"
+    },
+    {
+      "sourcePage": 5,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR ABDOMINAL BELT (L)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR ABDOMINAL BELT (M)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR ABDOMINAL BELT (S)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR ABDOMINAL BELT (XL)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR ANKLET WITH BINDER"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR ANKLET WITH BINDER (L)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR ARM POUCH (XL)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR CLAVICLE BRACE (L)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR CLAVICLE BRACE (M)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR CREPE BANDAG (BOX) 7.5CM"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR CREPE BANDAG (JAR) 15CM"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR CREPE BANDAG 5CM"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR CREPE BANDAGE (JAR) 10CM"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR CREPE BANDAGE (JAR) 6CM"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR CREPE BANDAGE (JAR) 8CM"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR ELBOW BRACE (S)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR KNEE CAP (3XL)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR KNEE CAP (S)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR KNEE CAP (XL)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR KNEE CAP (XXL)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR KNEE CAP 3D (M)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR KNEE CAP 3D L"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR L.S. BELT (L)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR L.S. BELT (S)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR L.S. BELT (XL)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "BR RIB BELT"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "KINESIOLOGY TAPE 5CM"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "FREDUN PHARMACEUTICALS LTD",
+      "name": "NEBULIZER MACHINE (NEBON)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "GARIMA HEALTHCARE PVT LTD.",
+      "name": "ENEMA B.P."
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "GENEX",
+      "name": "WALL MOUNTING COMMMODE STOOL-7003"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "GLENMARK",
+      "name": "ASCODEX LS 100ML"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "GLENMARK",
+      "name": "MIFER FORT TAB"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "GLENMARK",
+      "name": "MIFER PLUS DS 60ML"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "GYPSONA",
+      "name": "PLASTER OF PARIS (GYPSONA) 10CM"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "GYPSONA",
+      "name": "PLASTER OF PARIS (GYPSONA) 15CM"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "HMD",
+      "name": "SCALP VEIN NO 22"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "HOPECURE LIFECARE DEVICES",
+      "name": "ONE PRICK 3ML SYRING"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "HOPECURE LIFECARE DEVICES",
+      "name": "ONE PRICK 5ML SYRING"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "HY-CHEM",
+      "name": "SPIRIT SURGICAL (HY-CHEM)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "IGNITE MEDIPLUS INDUSTRIES",
+      "name": "NEBULIZER MASK (ADULT)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "IGNITE MEDIPLUS INDUSTRIES",
+      "name": "NEBULIZER MASK (PEDIATRIC)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INFERA HEALTHCARE",
+      "name": "LERAFRESH MOUTHWASH 100ML"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INFINITIVE PHARMACEUTICAL INDUSTRIS",
+      "name": "ZOLE TAB(FURAZOLIDINE)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INNOVATOU INNOVACARE",
+      "name": "MASK"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INNOVATOU INNOVACARE",
+      "name": "SKIN BLADE/PREP RAZOR"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INTAS",
+      "name": "ABD SUSPENTION"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INTAS",
+      "name": "CALCITAS-D3 CAP"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INTAS",
+      "name": "FCN-200 TAB"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INTAS",
+      "name": "MINTAGESIC-P 60ML SYP"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INTAS",
+      "name": "NIMUCET-MF SYP 60ML"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INTAS",
+      "name": "OFLOTAS IV 100ML (OFLOXACIN)"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INTAS",
+      "name": "ONDET INJ 2ML"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "INTAS",
+      "name": "ONDET-MD TAB"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "JMS",
+      "name": "IV SET JMS"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "JMS",
+      "name": "PAPER TAP JSM 2\""
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "JMS",
+      "name": "PAPER TAPE 1/2\" JMS"
+    },
+    {
+      "sourcePage": 6,
+      "manufacturer": "K-LIFE",
+      "name": "DIGITAL THERMOMETER DT01-B"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "K. B. PRODUCTS",
+      "name": "HYDROGEN PEROXIDE (KB) 100ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "KLOKTER HRALTHCARE PVT LTD",
+      "name": "AXYCLO-PLUS TAB"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LABORATE",
+      "name": "CEFLOX EYE/EAR DROPS"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LABORATE",
+      "name": "CEFLOX-DEE DROP"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LABORATE",
+      "name": "FESTIVE DROP"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LABORATE",
+      "name": "HUNGREE SYP (ELACHI)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LABORATE",
+      "name": "HUNGREE SYP (MANGO)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LABORATE",
+      "name": "HUNGREE SYP 200ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LABORATE PHARMACEUTICAL INDI PVT LT",
+      "name": "DHUNGREE SYP (ORANGE)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LABORATE PHARMACEUTICAL INDI PVT LT",
+      "name": "DHUNGREE SYP (PINEAPPLE)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LANARK LABORATORIS",
+      "name": "AXYCLO-SR PLUS TAB"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LANARK LABORATORIS",
+      "name": "LEXOZEN TAB"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LATEX",
+      "name": "ADHESIVE TAPE 4\" (ORTHO)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LEEFORD",
+      "name": "DERMIFORD CREAM"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LEEFORD",
+      "name": "ITROSTRED-TF CREAM"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LEEFORD",
+      "name": "KETOFORD CREAM 15 GM"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LEEFORD",
+      "name": "MIGRAFEN TAB"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LEEFORD",
+      "name": "TENACID-MF TAB"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LEEFORD",
+      "name": "VERTIFORD-16 TAB"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LIFE CARE PHARMACEUTICALE PVT LTD",
+      "name": "AMIKACIN 500MG 2ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "LIFE CARE PHARMACEUTICALE PVT LTD",
+      "name": "DNS 500ML (CLEANPORT)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MACLEODS",
+      "name": "LEVOGRAM SYP (LEVOCETRIZINE)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MACLEODS",
+      "name": "MACPRED 40 MG INJ"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MACLEODS",
+      "name": "ZENTICROSS 400MG TAB"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MAMTA SPINNERS ABSORBENT",
+      "name": "COTTON ROLL 100 GM(MAMTA ABSORBENT)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MAMTA SPINNERS ABSORBENT",
+      "name": "COTTON ROLL 200 GM (MAMTA ABSORBENT)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MAMTA SPINNERS ABSORBENT",
+      "name": "COTTON ROLL 20GM (MAMTA ABSORBENT)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MAMTA SPINNERS ABSORBENT",
+      "name": "COTTON ROLL 400GM (MAMTA ABSORBENT)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MAMTA SPINNERS ABSORBENT",
+      "name": "COTTON ROLL 50 GM (MAMTA ABSORBENT)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MANCARE HEALTHCARE PVT. LTD",
+      "name": "MAGNAKOF-LS 100ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MANCARE HEALTHCARE PVT. LTD",
+      "name": "TERBIMAN 250 TAB"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MANKIND PRIME LABS PVT LTD",
+      "name": "BIFIBLESS TAB(PRE & PROBIOTIC) CAP"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MANKIND PRIME LABS PVT LTD",
+      "name": "PARAKIND 125MG SYP"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MD",
+      "name": "COTTON BANDAGE 2\" (MD)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MD",
+      "name": "COTTON BANDAGE 3\" (MD)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MD",
+      "name": "COTTON BANDAGE 4\" (MD)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MD",
+      "name": "COTTON BANDAGE 6\" (MD)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MD",
+      "name": "COTTON ROLL 100GM"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MD",
+      "name": "COTTON ROLL 10GM"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MD",
+      "name": "COTTON ROLL 20 GM"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MD",
+      "name": "COTTON ROLL 50GM"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MEDICARE",
+      "name": "CANNULA FIXATOR (MEDICARE)"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MEDRIX LABS LVT LTD",
+      "name": "CLINWAY GEL 15 GM"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MEDRIX LABS LVT LTD",
+      "name": "HB PUMP XT TAB"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MEDWIN BIOTECH",
+      "name": "MEDI-MVI (MULTIVITAMIN ) INJ 10ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "CALVIT INJ 30ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "CHLORPHENIRAMINE MELEATE INJ 30ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "CYCLOLIN-M INJ 30ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "CYNOVIT INJ"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "MERCIN-75 INJ 30ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "ONDANSETRON INJ 30ML"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "ONDASETRON 30ML INJ"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "PHENARAMINE MELEATE INJ"
+    },
+    {
+      "sourcePage": 7,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "PHENIRAMINE MALEATE INJ 30ML"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "WEMYCIN INJ 30ML"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MERLIN PHARMA",
+      "name": "WEXOL INJ 20ML"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "APRESS-5 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "APRESS-AT TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "ASIMIC-FORTE TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "ASIMIC-MR TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "ASIMIC-PT4 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "ASIMIC-T4 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "AZITOMIC-250 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "AZITOMIC-500 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "BEFEN-10 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "CEFMIC-CV TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "CEFPOD-200 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "CHESMIC COLD TOTAL TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "D-PROTIMIC POWDER"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "D-PROTIMIC POWDER (CHOCOLATE)"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "DEFLAMIC -6 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "DERIMIC RETARD-150 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "ESMOZ-40 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "ESMOZ-DSR CAP"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "ETORIC-60 TH"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "GLOWELL SKIN SHINE CREAM"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "ITRAMIC-100 CAP"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "MECOGOLD PLUS CAP"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "MONTEMIC -LC TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "NERVOMIC FORTE TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "PANTAMIC-40 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "PANTAMIC-D TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "PLATOMIC TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "PREGAMIC-M CAP"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "RABIMIC-DSR"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "SUNVITAL SOFTGEL CAP"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "TELMIZ-40H TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROLIFE",
+      "name": "VITAMIN-E (MICROLIFE) CAP"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MICROPORE",
+      "name": "PAPER TAP MICROPORE 2\""
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MODI LIFECARE INDUSTRIES LTD",
+      "name": "ACECLOR-F TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MODI LIFECARE INDUSTRIES LTD",
+      "name": "ACIPLEX CAP (B-COMPLEX )"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MODI LIFECARE INDUSTRIES LTD",
+      "name": "CLOFEM + TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MODI LIFECARE INDUSTRIES LTD",
+      "name": "DEXSON-5 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MODI LIFECARE INDUSTRIES LTD",
+      "name": "DIFENAC-F TAB (DICLO)"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "MRK HEALTHCARE PVT LTD",
+      "name": "HAND GLOES NO. 7 (NULIFE)"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "NEON",
+      "name": "LOX-2% 30ML INJ"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "NICHEPHARMA LIFESCIENCES PRIVET LIMI",
+      "name": "TNEEDUROBION FORTE INJ 2ML"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "NIPRO",
+      "name": "NIPRO 2ML SYRING"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "NLERA HEALTHCARE",
+      "name": "VOY-D3 SACHETS"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "NUORTHO WELLNBESS LLP",
+      "name": "NEOPRENE HINGER WARP M"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "ODIN",
+      "name": "THERMAMETER DIGI"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "OMEGA BIOTECH",
+      "name": "ERYTHRO-500 TAB"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "OMEGA BIOTECH",
+      "name": "METROGA TAB 400"
+    },
+    {
+      "sourcePage": 8,
+      "manufacturer": "OMEGA PHARTMA",
+      "name": "COTRIMOXAZOLE D.S. TAB"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "OMEGA PHARTMA",
+      "name": "DEXA TAB"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "OMRON",
+      "name": "BP MONITOR 7121-J"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "ONEDRIP",
+      "name": "RL 500ML ONEDRIP"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "ORTHO",
+      "name": "ADHESIVE TAPE 2\""
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "PARAS",
+      "name": "PARAS SYRING 2ML"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "PARAS",
+      "name": "PARAS SYRING 5ML"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "PENTA PHARMACEUTICALS",
+      "name": "P-CET TAB (CETRIZINE)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "PENTA PHARMACEUTICALS",
+      "name": "PENTAPLEX PLUS TAB"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "PION",
+      "name": "BP HANDLE NO. 04"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "BLOOD SET (POLY)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "I.V SET (POLYMED)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "NOUVO CLICK EXT 45, 10 CM"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "POLYCATH 3WAY20"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "POLYFLON-20G"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "POLYFLON-22G"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "POLYNEO IV CAN. 24"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "POLYWAY THREE WAY (POLY)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "RYLES TUBE-08 FG(POLYMED)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "RYLES TUBE-12 FG(POLYMED)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "RYLES TUBE-14 FG(POLYMED)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "SUCTION CATH-12"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "SUCTION CATH-14"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "SUCTION CATH-16"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "POLYMED",
+      "name": "URIN BAG (POLY)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "PUNISKA",
+      "name": "D5 250ML PSK"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "PUNISKA",
+      "name": "RL 250ML PSK"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RANBAXY",
+      "name": "ALFAKIM 250MG INJ"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RANBAXY",
+      "name": "ALFAKIM 500MG INJ 2ML"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RAXON BIOMEDICAL",
+      "name": "SKIN STAPLER RAXSTAP"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "REALCAD",
+      "name": "D25 100ML (REALCADE)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "REALCAD",
+      "name": "D5 500ML REALCADE"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "REALCAD",
+      "name": "DNS 500ML REALCADE"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "REALCAD",
+      "name": "METRO I.V (REALCADE)"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "REALCAD",
+      "name": "NS 100ML REALCADE"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "REALCAD",
+      "name": "NS 500ML REALCADE"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "REALCAD",
+      "name": "RL 500ML REALCADE"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "ALLERKEY-M KID SYRUP"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "ALLERKEY-M TAB"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "CAZIREL-K27 TAB"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "KEY CHAINS"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "LILI-REL CREAM"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "NANDROL-25 INJ"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "NANDROL-D INJ"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "NOTEPAD HRS"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "NUROPREG-OD CAP"
+    },
+    {
+      "sourcePage": 9,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "PEN"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "PLATREL CAP"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "REAMOXY-CV 625 LB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "RELTEK-MR TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "RELTEK-SP TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "RELTEK-TH4 TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "RELYCOFRESH-M SOFTGEL"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RELTIC LABS HRS",
+      "name": "REXACINZOLE CREAM"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RHOMBUS PHARMA PRIVATE LIMITED",
+      "name": "RHINCAL-XT TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "ROYAL SURGICARE PVT LTD",
+      "name": "BLOOD SET (ROYAL)"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "RPG LIFE SCIENCES",
+      "name": "RABIARPI-DSR CAP"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SAACHI MEDIC",
+      "name": "EXAMINATION GLOVES (SAFE TOUCH) S"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SAINT MICHAEL BIOTECH",
+      "name": "DEEMOL-500 TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SANOFI",
+      "name": "AVIL INJ 2ML"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SHINOM COSMECEUTICALS",
+      "name": "FUTIEASE-30 CREAM"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SHINOM COSMECEUTICALS",
+      "name": "FUTIEASE-M CREAM"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SHINOM COSMECEUTICALS",
+      "name": "ITOFIL-65 SB CAP"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SHINOM COSMECEUTICALS",
+      "name": "ITROFIL-130 SB CAP"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SHINOM COSMECEUTICALS",
+      "name": "SHIMTER-M CREAM"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SKKL",
+      "name": "D5% 500ML (SKKL)"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SKKL",
+      "name": "DNS 500ML DISKPORT"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SKKL",
+      "name": "METRO I.V (SKKL)"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SKKL",
+      "name": "NS 100ML SKKL"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SKKL",
+      "name": "NS 500ML DISKPORT"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SKKL",
+      "name": "RL SKKL 500ML"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "ACESUN COLD & FLU TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "ACEZOX-MR TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "ALBESUN 10ML SUS"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "ALLZVIT TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "ALOSOFT SOAP 75GM"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "AXODRIL-DX TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "AXODRIL-LS JUNIOR 60ML SYP"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "AZISUN-250 TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "BESULE CAPSULES"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "CANDISUN CREAM 15 GM"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "CANDISUN-B CREAM 15 GM"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "COLBATE -GM OINT"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "COLDFREE CAP"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "COLSUN-500 TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "COLSUN-650 TAB"
+    },
+    {
+      "sourcePage": 10,
+      "manufacturer": "SUNLIFE",
+      "name": "COMBISUN 60ML SYP"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "DICLOSUN AQUA INJ 1ML"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "DULAX TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "FERR-RED SYP 200ML"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "FLOXNOR-400 TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "GO CRACK CREAM 10GM"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "HUM UP 200ML SYP"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "LEOCET-M SYP 60ML"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "MEFESPAS PLUS 60ML SYP"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "MEFESPAS TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "MONTAC-D TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "MOXNOVA-CV 625 LB TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "NIMZY COLD & FLU TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "NORSUN-TZ TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "NYZIP PLUS TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "OMZED 20 CAP"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "PENTASUN-40 TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "POVISUN OINT 10GM"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "POVISUN OINT 15 GM"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "RABISUN-20 TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "RABISUN-DSR CAP"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "REXSUN-DX 100ML SYP"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "SPASOSUN CAP"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "SUCEE TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "SUNCEF (CEFTRIAXONE ) INJ 1 G"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "SUNCOF MINT 100ML SYP"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "TQ TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "TRYZYME 200ML SYP"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "ZEDCET 60ML SYP (CETIRIZINE)"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "ZEMSOFIT TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "ZIMCOFIT SYP 200ML"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE",
+      "name": "ZONE-F OINT 15GM"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE SCIENCES LVT LTD",
+      "name": "ACEPEP-SP(BLUE) TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE SCIENCES LVT LTD",
+      "name": "ACEPEP-SP(GOLD) TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE SCIENCES LVT LTD",
+      "name": "ACEPEP-SP(SILVER) TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE SCIENCES LVT LTD",
+      "name": "COMBITAB (SILVER)"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE SCIENCES LVT LTD",
+      "name": "CYCLOPLUS TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE SCIENCES LVT LTD",
+      "name": "OMFLOX-OZ TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SUNLIFE SCIENCES LVT LTD",
+      "name": "ULTRASUN TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SURGI-SAFE",
+      "name": "EXAMINATION GLOVES (SURGI SAFE) EXTRA S"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "SVAS ENTERPRISES",
+      "name": "HYDROGEN PEROXIDE (SVAS) 450ML"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TARA",
+      "name": "NS 100ML (TARA)"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TELEFLEX MEDICAL PRAIVATE LTD",
+      "name": "RUSCH FOLEY CATH NO 14"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TELEFLEX MEDICAL PRAIVATE LTD",
+      "name": "RUSCH FOLEY CATH NO 18"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TELEFLEX MEDICAL PRAIVATE LTD",
+      "name": "RUSCH FOLRY CATH NO 12"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TOP",
+      "name": "SCALP VAIN SET NO 22 (TOP)"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TOP",
+      "name": "SCALP VAIN SET NO 23 (TOP)"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TORRENT PHARMA",
+      "name": "ACYCLOSURE TH 4 TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TORRENT PHARMA",
+      "name": "TOPCEF-200 TAB"
+    },
+    {
+      "sourcePage": 11,
+      "manufacturer": "TRASPORT",
+      "name": "ADD FREIGHT"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "TRANSIT INSURANCE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "TRASPORT",
+      "name": "TRANSIT INSURANCE."
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "UNIVENTIS MEDICARE LTD",
+      "name": "OFTIROL-200 TAB"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "UNIVERSAL LIFE SCIENCE",
+      "name": "CLOZOTIC EAR DROP"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "UNIVERSAL LIFE SCIENCE",
+      "name": "ORAL-L TAB"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "UNIVERSAL LIFE SCIENCE",
+      "name": "OTOGIC EAR DROPS"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "UNIVERSAL LIFE SCIENCE",
+      "name": "SOLERWAX DROP"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "UNIVERSAL TWIN LABS",
+      "name": "CLINCITOP GEL 20GM"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "UNIVERSAL TWIN LABS",
+      "name": "DERMI 5 OIN"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "UNIVERSAL TWIN LABS",
+      "name": "SMILOGEL 10 GM"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "V.L. PRODUCTS",
+      "name": "HYDROGEN PEROXIDE 100ML"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "VDS LIFE CARE LLP",
+      "name": "PREP RAZOR"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "VDS LIFE CARE LLP",
+      "name": "SURGICAL BLADE NO. 11"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "VISSCO",
+      "name": "KNEE CAP VISSCO M"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "VISSCO",
+      "name": "KNEE CAP VISSCO S"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "VISSCO",
+      "name": "VISSCO L.S. BELT (XL)"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "WALLACE",
+      "name": "LEVCAM-500 TAB"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "WILSON TAPES PVT LTD",
+      "name": "EYE PAD"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "WOCKHARDT",
+      "name": "ACCECLOWOC-P TAB"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE",
+      "name": "D5% 500ML ZEE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE",
+      "name": "DNS 500ML ZEE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE",
+      "name": "NS 500ML ZEE"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "ACNELITE BAR SOAP"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "ACNEZEST EC FASE WASH 100GM"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "ACNEZEST-EC FACE WASH 200ML"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "ALOFFEL SKIN GEL 100GM"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "AXYMOX-CL625 TAB"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "BECEVIT TAB"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "CALAZEST LOTION 60GM"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "CLEAR EYE CREAM"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "CLOBIZIN CREAM 30GM"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "CLOBIZIN-SL 15GM CREAM"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "DERMITAR LOTION 100ML"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "DOXIZEST-100LB TAB"
+    },
+    {
+      "sourcePage": 12,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "ELWYFLOX-200 TAB"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "FUSINICE CREAM 10GM"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "FUSINICE-B 10G"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "FUSINICE-M CREAM 10GM"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "HYLEXIT 10 TAB"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "HYLEXIT 100 ML SYP"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "HYLEXIT 25 TAB"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "HYLEXIT DROPS"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "ITRAVIN CAP 100MG"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "ITRAVIN CAP 200MG"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "KETONICE CREAM 30GM"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "KETONICE SHAMPOO 100ML"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "KETONICE SOAP 75GM"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "KLINTEL GEL 30GM"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "KLINTEL-300 CAP"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "LOT-O-HAIR SHAMPOO"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "PERMEX SOAP"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "SOFZEL EMMOLIENT 200ML"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "TERBIZEST-250 TAB"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "TRETLIX-CREAM 30GM"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "UVILITE CREAM"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "WELOCIP 500MG"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEE LABORATORISE LIMITED",
+      "name": "ZESTGLOW CREAM"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZEN PHARMA",
+      "name": "OPTINEURON FORTE ING 3ML"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZUVNTUS",
+      "name": "NEXDOL 100MG INJ"
+    },
+    {
+      "sourcePage": 13,
+      "manufacturer": "ZUVNTUS",
+      "name": "ZUVENDINE SOLUTION"
+    }
+  ]
+}
