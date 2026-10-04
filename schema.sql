@@ -115,7 +115,7 @@ create table product_images (
   storage_key text not null,
   public_url text,
   alt_text text,
-  image_type text not null default 'primary' check (image_type in ('primary', 'thumbnail', 'gallery', 'lifestyle')),
+  image_type text not null default 'primary' check (image_type in ('primary', 'thumbnail', 'gallery', 'lifestyle', 'product')),
   source text not null default 'admin_upload',
   source_url text,
   verified boolean not null default false,

@@ -48,7 +48,6 @@ const defaultState = {
   prescriptionRequests: [],
   deliveries: [],
   gallery: [],
-  imageCandidates: {},
   customProducts: [],
   overrides: {},
 };
@@ -65,7 +64,6 @@ function loadState() {
       prescriptionRequests: Array.isArray(saved.prescriptionRequests) ? saved.prescriptionRequests : [],
       deliveries: Array.isArray(saved.deliveries) ? saved.deliveries : [],
       gallery: Array.isArray(saved.gallery) ? saved.gallery : [],
-      imageCandidates: saved.imageCandidates && typeof saved.imageCandidates === 'object' ? saved.imageCandidates : {},
       customProducts: Array.isArray(saved.customProducts) ? saved.customProducts : [],
       overrides: saved.overrides && typeof saved.overrides === 'object' ? saved.overrides : {},
     };
@@ -82,7 +80,6 @@ let supabaseSession = (() => {
     return null;
   }
 })();
-let imageManifest = { products: {}, categories: {} };
 let remoteCatalogProducts = null;
 let catalogSource = 'pdf';
 
@@ -344,23 +341,12 @@ async function signOutSupabase() {
   storeSupabaseSession(null);
 }
 
-async function loadImageManifest() {
-  try {
-    const response = await fetch('/image-manifest.json', { cache: 'no-store' });
-    if (!response.ok) return;
-    const manifest = await response.json();
-    imageManifest = { products: manifest.products || {}, categories: manifest.categories || {} };
-    renderShell();
-  } catch {
-    // The storefront remains usable with safe placeholders until discovery is configured.
-  }
-}
-
 function normalizeRemoteProduct(raw) {
   const images = Array.isArray(raw.images) ? raw.images : [];
   const relationName = (relation) => relation?.name || relation?.[0]?.name || 'Not configured';
   return {
     id: String(raw.sku || raw.id || '').trim(),
+    databaseId: String(raw.id || '').trim(),
     name: raw.name || 'Unnamed product',
     manufacturer: relationName(raw.manufacturer),
     sourcePage: raw.source_page || null,
@@ -373,13 +359,18 @@ function normalizeRemoteProduct(raw) {
     specifications: raw.specifications || {},
     variants: Array.isArray(raw.product_variants) ? raw.product_variants : [],
     images: images.map((image) => ({
+      id: image.id || '',
+      storageKey: image.storageKey || image.storage_key || '',
       imageUrl: image.imageUrl || image.public_url,
+      publicUrl: image.publicUrl || image.public_url || '',
       altText: image.altText || image.alt_text || raw.name,
       verified: image.verified === true,
       imageStatus: image.imageStatus || image.image_status || 'verified',
       source: image.source || '',
       sourceUrl: image.sourceUrl || image.source_url || '',
       isPrimary: image.isPrimary === true || image.is_primary === true,
+      sortOrder: image.sortOrder ?? image.sort_order ?? 0,
+      active: image.active !== false,
     })),
     moq: raw.moq ?? null,
     price: raw.price ?? null,
@@ -506,8 +497,6 @@ function categoryProducts(categoryName) {
 }
 
 function categoryImageUrl(category) {
-  const manifestImage = (imageManifest.categories?.[category.name]?.images || []).find(isPublishableImage);
-  if (manifestImage) return imageRecordUrl(manifestImage);
   return categoryProducts(category.name).flatMap((product) => linkedProductImages(product)).find(Boolean) || '';
 }
 
@@ -570,20 +559,17 @@ function imageRecordUrl(record) {
 }
 
 function isPublishableImage(record) {
+  const url = imageRecordUrl(record);
+  if (!/^https?:\/\//i.test(url)) return false;
   if (typeof record === 'string') return true;
-  return record?.verified === true || record?.imageStatus === 'verified' || (record?.dataUrl && record?.verified !== false);
+  return record?.active !== false && (record?.verified === true || record?.imageStatus === 'verified');
 }
 
 function linkedProductImages(product) {
   const configured = Array.isArray(product?.images) ? product.images : [];
-  const mapped = imageManifest.products?.[product?.id]?.images || [];
-  const candidateImages = state.imageCandidates?.[product?.id] || [];
-  const galleryImages = state.gallery
-    .filter((item) => item.productId === product?.id && item.active !== false)
-    .sort((a, b) => Number(b.isPrimary) - Number(a.isPrimary))
-    .filter(Boolean);
-  return [...configured, ...galleryImages, ...mapped, ...candidateImages]
+  return configured
     .filter(isPublishableImage)
+    .sort((a, b) => Number(b.isPrimary) - Number(a.isPrimary) || Number(a.sortOrder || 0) - Number(b.sortOrder || 0))
     .map(imageRecordUrl)
     .filter(Boolean);
 }
@@ -685,11 +671,9 @@ function renderManufacturerSection() {
 }
 
 function renderHomeVisualLinks() {
-  const galleryImages = Object.entries(imageManifest.products || {}).flatMap(([productId, record]) => (record.images || [])
+  const galleryPreview = customerProducts().flatMap((product) => (product.images || [])
     .filter(isPublishableImage)
-    .map((image) => ({ ...image, productId })));
-  const localImages = state.gallery.filter((item) => item.active !== false && isPublishableImage(item));
-  const galleryPreview = [...localImages, ...galleryImages].slice(0, 3);
+    .map((image) => ({ ...image, productId: product.id }))).slice(0, 3);
   const approvedDeliveries = state.deliveries.filter((delivery) => delivery.status === 'approved');
   return `<section class="shell home-discovery-grid"><a class="home-discovery-card" href="#/gallery"><div class="home-discovery-art ${galleryPreview.length ? 'has-images' : ''}">${galleryPreview.length ? galleryPreview.map((image) => `<img src="${esc(imageRecordUrl(image))}" alt="Approved product gallery image" loading="lazy" decoding="async" />`).join('') : placeholderArt('Gallery images pending', true)}</div><div class="home-discovery-copy"><p class="eyebrow">Product gallery</p><h2>See verified product imagery</h2><p>${galleryPreview.length ? `${galleryPreview.length} approved image${galleryPreview.length === 1 ? '' : 's'} ready to explore.` : 'Product-linked gallery images appear after an administrator verifies them.'}</p><span class="text-link">Open gallery <span>↗</span></span></div></a><a class="home-discovery-card" href="#/deliveries"><div class="home-discovery-art ${approvedDeliveries.length ? 'has-images' : ''}">${approvedDeliveries.length ? approvedDeliveries.slice(0, 3).map((delivery) => `<img src="${esc(delivery.photos?.[0] || '')}" alt="Approved customer delivery" loading="lazy" decoding="async" />`).join('') : placeholderArt('Delivery stories pending', true)}</div><div class="home-discovery-copy"><p class="eyebrow">Customer deliveries</p><h2>Purchase stories with approval</h2><p>${approvedDeliveries.length ? `${approvedDeliveries.length} approved customer stor${approvedDeliveries.length === 1 ? 'y' : 'ies'} available.` : 'Customer uploads remain private until an administrator approves them.'}</p><span class="text-link">View deliveries <span>↗</span></span></div></a></section>`;
 }
@@ -764,28 +748,25 @@ function renderProductDetail(id) {
   const bulkRows = product.bulkPricing?.length ? product.bulkPricing.map((tier) => `<tr><td>${esc(tier.label || tier.min_quantity || '')}</td><td>${tier.price || tier.wholesale_price ? formatCurrency(tier.price || tier.wholesale_price) : 'Not configured'}</td></tr>`).join('') : '<tr><td colspan="2">Bulk pricing is not configured for this product.</td></tr>';
   const imageUrls = linkedProductImages(product);
   const detailImage = imageUrls[0] ? `<div class="product-art product-art-image"><img src="${esc(imageUrls[0])}" alt="${esc(product.name)}" loading="eager" decoding="async" /></div>` : placeholderArt(product.category === 'Orthopedic' ? 'Orthopedic image pending' : undefined);
-  const thumb = (src, label, active = false) => `<button class="detail-thumb ${active ? 'is-active' : ''}" ${src || active ? '' : 'disabled'}>${src ? `<img src="${esc(src)}" alt="${esc(label)}" loading="lazy" decoding="async" />` : placeholderArt(label, true)}</button>`;
+  const thumb = (src, label, index) => `<button type="button" class="detail-thumb ${index === 0 ? 'is-active' : ''}" data-action="select-detail-image" data-image-url="${esc(src)}" data-image-index="${index}" aria-label="Show ${esc(label)}"><img src="${esc(src)}" alt="${esc(label)}" loading="lazy" decoding="async" /></button>`;
+  const detailControls = imageUrls.length > 1 ? `<div class="detail-gallery-controls"><button type="button" class="detail-gallery-control" data-action="previous-detail-image" aria-label="Previous product image">←</button><span>${imageUrls.length} product images</span><button type="button" class="detail-gallery-control" data-action="next-detail-image" aria-label="Next product image">→</button></div>` : '';
   const direct = product.purchaseMode === 'direct' && product.price !== null && product.price !== undefined && product.price !== '' && product.stockStatus !== 'out-of-stock';
   const status = product.stockStatus === 'in-stock' ? 'In stock' : product.stockStatus === 'out-of-stock' ? 'Out of stock' : 'Stock status not configured';
-  return `<div class="shell detail-page"><a class="back-link" href="#/products">← Back to catalog</a><div class="detail-grid"><div class="detail-media"><div class="detail-main-art">${detailImage}</div><div class="detail-thumbs">${thumb(imageUrls[0], 'Main image', true)}${thumb(imageUrls[1], 'Image 2')}${thumb(imageUrls[2], 'Image 3')}</div></div><div class="detail-summary"><div class="detail-topline"><span class="tag">${esc(product.category)}</span><span class="source-ref">${product.sourcePage ? `PDF page ${esc(product.sourcePage)}` : 'Catalog record'}</span></div><h1>${esc(product.name)}</h1><p class="detail-manufacturer">Manufacturer / division <strong>${esc(product.manufacturer)}</strong></p><p class="detail-copy">${product.description ? esc(product.description) : 'This is a source catalog entry with editable product fields. Add approved packaging, specifications, pricing and images from the admin workspace before publishing a full product record.'}</p><div class="detail-status-row"><span class="availability-mark"></span><span>${status}</span><span class="divider-dot"></span><span>${product.purchaseMode === 'direct' ? 'Direct purchase' : product.purchaseMode === 'enquiry' ? 'Enquiry only' : 'Quote enabled'}</span></div><div class="detail-facts"><div><span>Pack size</span><strong>${displayValue(product.packSize)}</strong></div><div><span>MOQ</span><strong>${displayValue(product.moq)}</strong></div><div><span>GST</span><strong>${displayValue(product.gst, 'Not configured')}</strong></div><div><span>SKU / code</span><strong>${displayValue(product.sku, 'Not configured')}</strong></div></div><div class="detail-purchase"><div><span class="detail-price">${priceLabel(product)}</span><small>${product.wholesalePrice !== null && product.wholesalePrice !== undefined && product.wholesalePrice !== '' ? `Wholesale ${formatCurrency(product.wholesalePrice)}` : 'Wholesale price not configured'}</small></div><div class="detail-controls"><label class="variant-control">Variant<select disabled><option>Not configured</option></select></label><label class="quantity-control">Qty <input type="number" min="1" value="1" data-detail-qty /></label></div></div><div class="detail-actions"><button class="button button-primary" data-action="add-detail-cart" data-id="${esc(product.id)}">Add to cart</button>${direct ? `<button class="button button-dark" data-action="buy-now" data-id="${esc(product.id)}">Buy now</button>` : ''}<button class="button button-ghost" data-action="add-detail-quote" data-id="${esc(product.id)}">Request bulk quote</button><button class="button button-whatsapp" data-action="whatsapp-product" data-id="${esc(product.id)}">WhatsApp enquiry</button></div><p class="admin-note"><span class="info-mark">i</span> Product prices, variants and purchase mode are editable from the admin workspace. This source row does not include a verified price or image.</p></div></div><section class="detail-tabs"><div class="detail-tab-heading"><span class="is-active">Product details</span><span>Specifications</span><span>Packaging</span><span>Bulk pricing</span></div><div class="detail-tab-content"><div><h2>Source catalog record</h2><p>The storefront preserves the manufacturer, product name and source page from the uploaded PDF. Fields absent from that file remain intentionally blank.</p></div><table class="pricing-table"><thead><tr><th>Quantity tier</th><th>Wholesale price</th></tr></thead><tbody>${bulkRows}</tbody></table></div></section>${related.length ? `<section class="related-products"><div class="section-heading"><div><p class="eyebrow">Keep browsing</p><h2>Related ${esc(product.category)} entries</h2></div></div><div class="product-grid">${related.map((item) => renderProductCard(item, true)).join('')}</div></section>` : ''}</div>`;
+  return `<div class="shell detail-page"><a class="back-link" href="#/products">← Back to catalog</a><div class="detail-grid"><div class="detail-media"><div class="detail-main-art">${detailImage}</div><div class="detail-thumbs">${imageUrls.length ? imageUrls.map((url, index) => thumb(url, `Product image ${index + 1}`, index)).join('') : placeholderArt('Product images pending', true)}</div>${detailControls}</div><div class="detail-summary"><div class="detail-topline"><span class="tag">${esc(product.category)}</span><span class="source-ref">${product.sourcePage ? `PDF page ${esc(product.sourcePage)}` : 'Catalog record'}</span></div><h1>${esc(product.name)}</h1><p class="detail-manufacturer">Manufacturer / division <strong>${esc(product.manufacturer)}</strong></p><p class="detail-copy">${product.description ? esc(product.description) : 'This is a source catalog entry with editable product fields. Add approved packaging, specifications, pricing and images from the admin workspace before publishing a full product record.'}</p><div class="detail-status-row"><span class="availability-mark"></span><span>${status}</span><span class="divider-dot"></span><span>${product.purchaseMode === 'direct' ? 'Direct purchase' : product.purchaseMode === 'enquiry' ? 'Enquiry only' : 'Quote enabled'}</span></div><div class="detail-facts"><div><span>Pack size</span><strong>${displayValue(product.packSize)}</strong></div><div><span>MOQ</span><strong>${displayValue(product.moq)}</strong></div><div><span>GST</span><strong>${displayValue(product.gst, 'Not configured')}</strong></div><div><span>SKU / code</span><strong>${displayValue(product.sku, 'Not configured')}</strong></div></div><div class="detail-purchase"><div><span class="detail-price">${priceLabel(product)}</span><small>${product.wholesalePrice !== null && product.wholesalePrice !== undefined && product.wholesalePrice !== '' ? `Wholesale ${formatCurrency(product.wholesalePrice)}` : 'Wholesale price not configured'}</small></div><div class="detail-controls"><label class="variant-control">Variant<select disabled><option>Not configured</option></select></label><label class="quantity-control">Qty <input type="number" min="1" value="1" data-detail-qty /></label></div></div><div class="detail-actions"><button class="button button-primary" data-action="add-detail-cart" data-id="${esc(product.id)}">Add to cart</button>${direct ? `<button class="button button-dark" data-action="buy-now" data-id="${esc(product.id)}">Buy now</button>` : ''}<button class="button button-ghost" data-action="add-detail-quote" data-id="${esc(product.id)}">Request bulk quote</button><button class="button button-whatsapp" data-action="whatsapp-product" data-id="${esc(product.id)}">WhatsApp enquiry</button></div><p class="admin-note"><span class="info-mark">i</span> Product prices, variants and purchase mode are editable from the admin workspace. This source row does not include a verified price or image.</p></div></div><section class="detail-tabs"><div class="detail-tab-heading"><span class="is-active">Product details</span><span>Specifications</span><span>Packaging</span><span>Bulk pricing</span></div><div class="detail-tab-content"><div><h2>Source catalog record</h2><p>The storefront preserves the manufacturer, product name and source page from the uploaded PDF. Fields absent from that file remain intentionally blank.</p></div><table class="pricing-table"><thead><tr><th>Quantity tier</th><th>Wholesale price</th></tr></thead><tbody>${bulkRows}</tbody></table></div></section>${related.length ? `<section class="related-products"><div class="section-heading"><div><p class="eyebrow">Keep browsing</p><h2>Related ${esc(product.category)} entries</h2></div></div><div class="product-grid">${related.map((item) => renderProductCard(item, true)).join('')}</div></section>` : ''}</div>`;
 }
 
 function renderGallery() {
   const categoryFilter = pathInfo().query.get('category') || 'All';
   const galleryCategories = ['All', 'Medicines', 'Surgical', 'Orthopedic', 'Diagnostics', 'PPE', 'Medical Devices'];
   const categoryMap = { Surgical: 'Surgical Supplies', Diagnostics: 'Diagnostic Products' };
-  const manifestGallery = Object.entries(imageManifest.products || {}).flatMap(([productId, record]) => (record.images || [])
-    .filter(isPublishableImage)
-    .map((image, index) => ({ ...image, id: `manifest-${productId}-${index}`, productId, active: true })));
-  const activeGallery = [...state.gallery, ...manifestGallery].filter((item) => {
-    if (item.active === false) return false;
-    if (!isPublishableImage(item) || item.imageStatus === 'pending_review' || item.imageStatus === 'rejected') return false;
+  const activeGallery = customerProducts().flatMap((product) => (product.images || []).map((image) => ({ ...image, productId: product.id }))).filter((item) => {
+    if (item.active === false || !isPublishableImage(item) || item.imageStatus === 'pending_review' || item.imageStatus === 'rejected') return false;
     if (categoryFilter === 'All') return true;
     const product = getProduct(item.productId);
     return product?.category === (categoryMap[categoryFilter] || categoryFilter);
   });
   const galleryTabs = `<div class="gallery-filter-row">${galleryCategories.map((category) => `<a class="${categoryFilter === category ? 'active' : ''}" href="#/gallery${category === 'All' ? '' : `?category=${encodeURIComponent(category)}`} ">${esc(category)}</a>`).join('')}</div>`;
-  return `<div class="shell gallery-page">${pageTitle('Product gallery', 'A product-linked visual library', 'Only approved product images appear publicly. Automatically discovered candidates stay private until an administrator verifies the match.')}${galleryTabs}${activeGallery.length ? `<div class="gallery-grid">${activeGallery.map((item) => { const product = getProduct(item.productId); const image = imageRecordUrl(item); return product ? `<article class="gallery-card"><div class="gallery-image">${image ? `<img src="${esc(image)}" alt="${esc(product.name)}" loading="lazy" decoding="async" />` : placeholderArt()}</div><div class="gallery-card-body"><span class="tag">${esc(product.category)}</span><h3>${esc(product.name)}</h3><p>${esc(product.manufacturer)}</p><a class="text-link" href="#/product/${product.id}">View product <span>↗</span></a></div></article>` : ''; }).join('')}</div>` : `<div class="empty-state large-empty gallery-empty"><div class="empty-icon">IMG</div><h2>No verified product images yet</h2><p>Automatic discovery can find candidates when an image provider is configured. Candidates remain private until an admin verifies the product match.</p><a class="button button-dark" href="#/admin?tab=gallery">Open gallery management</a></div>`}<section class="gallery-rule"><div><p class="eyebrow">Traceable imagery</p><h2>Every image has a product relationship.</h2></div><p>A gallery item stores a linked product ID, an activation state, source details and verification state. That relationship is used by the customer-facing page.</p></section></div>`;
+  return `<div class="shell gallery-page">${pageTitle('Product gallery', 'A product-linked visual library', 'Only active, verified product images uploaded by an administrator appear publicly.')}${galleryTabs}${activeGallery.length ? `<div class="gallery-grid">${activeGallery.map((item) => { const product = getProduct(item.productId); const image = imageRecordUrl(item); return product ? `<article class="gallery-card"><div class="gallery-image">${image ? `<img src="${esc(image)}" alt="${esc(product.name)}" loading="lazy" decoding="async" />` : placeholderArt()}</div><div class="gallery-card-body"><span class="tag">${esc(product.category)}</span><h3>${esc(product.name)}</h3><p>${esc(product.manufacturer)}</p><a class="text-link" href="#/product/${product.id}">View product <span>↗</span></a></div></article>` : ''; }).join('')}</div>` : `<div class="empty-state large-empty gallery-empty"><div class="empty-icon">IMG</div><h2>No verified product images yet</h2><p>Upload verified product photos from the Product Images section in the admin workspace.</p><a class="button button-dark" href="#/admin?tab=products">Open product management</a></div>`}<section class="gallery-rule"><div><p class="eyebrow">Traceable imagery</p><h2>Every image has a product relationship.</h2></div><p>Each image is stored with a linked product ID, activation state, source details and verification state. That relationship powers the customer-facing gallery.</p></section></div>`;
 }
 
 function renderDeliveries() {
@@ -917,30 +898,29 @@ function renderAdmin() {
 }
 
 function imageRecordsFor(product) {
-  const local = state.gallery.filter((item) => item.productId === product.id && item.active !== false);
-  const candidates = state.imageCandidates?.[product.id] || [];
-  const manifest = imageManifest.products?.[product.id]?.images || [];
-  return [...local, ...candidates, ...manifest];
+  return Array.isArray(product?.images) ? product.images.filter((image) => image.active !== false) : [];
 }
 
-function imageStatusLabel(record) {
-  if (record?.verified === true || record?.imageStatus === 'verified') return 'Verified';
-  if (record?.imageStatus === 'rejected') return 'Rejected';
-  return 'Pending review';
+function formatBytes(value) {
+  const bytes = Number(value || 0);
+  if (bytes < 1024 * 1024) return `${Math.max(1, Math.round(bytes / 1024))} KB`;
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
 }
 
-function renderImageAutomation(product) {
+function renderProductImageManager(product) {
   const records = imageRecordsFor(product);
-  const approved = records.filter(isPublishableImage).length;
-  const pending = records.filter((record) => !isPublishableImage(record)).length;
-  const manifestState = imageManifest.products?.[product.id]?.imageStatus || 'placeholder';
-  return `<div class="image-automation"><div><p class="eyebrow">Automatic image system</p><strong>${approved ? `${approved} approved image${approved === 1 ? '' : 's'}` : 'No approved image yet'}</strong><small>${pending ? `${pending} candidate${pending === 1 ? '' : 's'} awaiting review` : manifestState === 'placeholder' ? 'Safe Product Image Coming Soon fallback' : 'Search for exact manufacturer + product matches.'}</small></div><div class="image-automation-actions"><button type="button" class="button button-primary button-small" data-action="discover-images" data-id="${product.id}">Find image candidates</button><a class="button button-ghost button-small" href="#/admin?tab=gallery&product=${product.id}">Manage images</a></div></div>`;
+  const databaseId = product.databaseId || '';
+  const inputId = `product-upload-${String(product.id).replace(/[^a-zA-Z0-9_-]/g, '-')}`;
+  const uploadDisabled = !databaseId || !supabaseReady() || !sessionAccessToken();
+  const statusText = !databaseId ? 'This local-only row has no Supabase product ID.' : !supabaseReady() ? 'Supabase is not configured for this deployment.' : !sessionAccessToken() ? 'Sign in as an administrator to upload product images.' : 'Files are validated in the browser and again on the server.';
+  const recordsMarkup = records.length ? records.map((image, index) => `<article class="product-image-record"><div class="product-image-record-preview">${isPublishableImage(image) ? `<img src="${esc(imageRecordUrl(image))}" alt="${esc(image.altText || product.name)}" loading="lazy" />` : placeholderArt('Image unavailable', true)}</div><div class="product-image-record-copy"><strong>${image.isPrimary ? 'Primary image' : `Product image ${index + 1}`}</strong><small>${esc(image.source || 'manual_upload')} · ${image.imageStatus === 'verified' ? 'Verified' : 'Inactive'}</small><span>${esc(image.altText || product.name)}</span></div><div class="product-image-record-actions"><button type="button" class="button button-ghost button-small" data-action="set-remote-primary" data-product-id="${esc(databaseId)}" data-image-id="${esc(image.id)}" ${uploadDisabled || image.isPrimary ? 'disabled' : ''}>${image.isPrimary ? 'Primary' : 'Set primary'}</button><label class="button button-ghost button-small ${uploadDisabled ? 'is-disabled' : ''}">Replace<input type="file" accept="image/jpeg,image/png,image/webp" data-replace-upload data-product-id="${esc(databaseId)}" data-image-id="${esc(image.id)}" ${uploadDisabled ? 'disabled' : ''} /></label><button type="button" class="remove-link" data-action="delete-remote-image" data-product-id="${esc(databaseId)}" data-image-id="${esc(image.id)}" ${uploadDisabled ? 'disabled' : ''}>Delete</button></div></article>`).join('') : '<div class="mini-empty"><p>No verified product images yet. Upload the first product photo below.</p></div>';
+  return `<section class="product-images-panel"><div class="product-images-heading"><div><p class="eyebrow">Product images</p><h3>Manual product photos</h3><p>Upload up to 5 JPG, JPEG, PNG or WEBP files at a time. Each file must be 5 MB or smaller.</p></div><span class="product-image-count">${records.length} current</span></div><div class="product-image-records">${recordsMarkup}</div><div class="product-image-upload"><div><strong>Upload new product photos</strong><small>${esc(statusText)}</small></div><label class="button button-primary button-small ${uploadDisabled ? 'is-disabled' : ''}" for="${esc(inputId)}">Choose photos<input id="${esc(inputId)}" class="visually-hidden-file" type="file" accept="image/jpeg,image/png,image/webp" multiple data-product-upload data-product-id="${esc(databaseId)}" ${uploadDisabled ? 'disabled' : ''} /></label><div class="upload-preview-grid" data-upload-preview="${esc(inputId)}" hidden></div><button type="button" class="button button-dark button-small" data-action="upload-product-images" data-product-id="${esc(databaseId)}" data-input-id="${esc(inputId)}" ${uploadDisabled ? 'disabled' : ''}>Save selected photos</button></div></section>`;
 }
 
 function renderAdminProducts() {
   const products = getProducts();
   const selected = products.find((product) => product.id === (pathInfo().query.get('product') || products[0]?.id));
-  return `<div class="admin-section-heading"><div><p class="eyebrow">Product CRUD</p><h2>Catalog management</h2><p>Imported rows are preserved; fields below are editable overrides stored locally for this preview.</p></div><a class="button button-ghost button-small" href="#/admin?tab=products&new=1">Add product</a></div><div class="admin-product-layout"><div class="admin-list"><div class="admin-list-toolbar"><strong>${formatNumber(products.length)} products</strong><button class="text-link" data-action="download-csv">Download CSV <span>↗</span></button></div>${products.slice(0, 120).map((product) => `<a class="admin-product-row ${selected?.id === product.id ? 'active' : ''}" href="#/admin?tab=products&product=${product.id}"><span class="admin-row-icon">${esc(product.category.slice(0, 2).toUpperCase())}</span><span><strong>${esc(product.name)}</strong><small>${esc(product.manufacturer)}</small></span><em>${esc(product.category)}</em></a>`).join('')}<p class="list-footnote">Showing the first 120 rows for a fast admin list. Search/import can be connected to the relational API in production.</p></div>${selected ? `<form class="form-card admin-editor" data-form="admin-product" data-id="${selected.id}"><div class="form-card-heading"><div><p class="eyebrow">Edit product</p><h2>${esc(selected.name)}</h2><p>${esc(selected.manufacturer)} · PDF page ${selected.sourcePage}</p></div></div><div class="form-grid"><label>Category<select name="category">${categories.map((category) => `<option ${selected.category === category.name ? 'selected' : ''}>${esc(category.name)}</option>`).join('')}</select></label><label>Subcategory<input name="subcategory" value="${esc(selected.subcategory)}" /></label><label>Brand<input name="brand" value="${esc(selected.brand || '')}" placeholder="Not configured" /></label><label>Pack size<input name="packSize" value="${esc(selected.packSize || '')}" placeholder="Not configured" /></label><label>Price<input name="price" type="number" min="0" value="${selected.price ?? ''}" placeholder="Blank until verified" /></label><label>Wholesale price<input name="wholesalePrice" type="number" min="0" value="${selected.wholesalePrice ?? ''}" placeholder="Blank until verified" /></label><label>MOQ<input name="moq" type="number" min="1" value="${selected.moq ?? ''}" placeholder="Blank until verified" /></label><label>GST<input name="gst" value="${esc(selected.gst || '')}" placeholder="Blank until verified" /></label><label>Stock status<select name="stockStatus"><option value="not-configured" ${selected.stockStatus === 'not-configured' ? 'selected' : ''}>Not configured</option><option value="in-stock" ${selected.stockStatus === 'in-stock' ? 'selected' : ''}>In stock</option><option value="out-of-stock" ${selected.stockStatus === 'out-of-stock' ? 'selected' : ''}>Out of stock</option></select></label><label>Purchase mode<select name="purchaseMode"><option value="quote" ${selected.purchaseMode === 'quote' ? 'selected' : ''}>Request quote</option><option value="direct" ${selected.purchaseMode === 'direct' ? 'selected' : ''}>Direct purchase</option><option value="enquiry" ${selected.purchaseMode === 'enquiry' ? 'selected' : ''}>Enquiry only</option></select></label><label class="full-span">Description<textarea name="description" rows="4" placeholder="Admin-approved description">${esc(selected.description || '')}</textarea></label></div>${renderImageAutomation(selected)}<label class="checkbox-line"><input type="checkbox" name="active" ${selected.active !== false ? 'checked' : ''} /> Active in customer catalog</label><button class="button button-dark" type="submit">Save product fields</button><p class="form-footnote">Automatic candidates remain private until verified. Product imagery is managed in Gallery so each image remains linked to a product.</p></form>` : ''}</div><div class="admin-import"><div><p class="eyebrow">Bulk import</p><h2>CSV / Excel-ready intake</h2><p>CSV import works in this browser preview. The production adapter accepts the same columns from CSV or Excel and validates rows server-side before publishing.</p></div><form data-form="admin-import"><label class="upload-drop compact-upload"><input type="file" name="file" accept=".csv,.xlsx,.xls,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" required /><span class="upload-icon">CSV</span><strong>Choose CSV or Excel</strong><small>CSV rows are validated here. Excel is handed to the production import adapter.</small></label><button class="button button-ghost" type="submit">Import file</button></form></div></div>`;
+  return `<div class="admin-section-heading"><div><p class="eyebrow">Product CRUD</p><h2>Catalog management</h2><p>Imported rows are preserved; fields below are editable overrides stored locally for this preview.</p></div><a class="button button-ghost button-small" href="#/admin?tab=products&new=1">Add product</a></div><div class="admin-product-layout"><div class="admin-list"><div class="admin-list-toolbar"><strong>${formatNumber(products.length)} products</strong><button class="text-link" data-action="download-csv">Download CSV <span>↗</span></button></div>${products.slice(0, 120).map((product) => `<a class="admin-product-row ${selected?.id === product.id ? 'active' : ''}" href="#/admin?tab=products&product=${product.id}"><span class="admin-row-icon">${esc(product.category.slice(0, 2).toUpperCase())}</span><span><strong>${esc(product.name)}</strong><small>${esc(product.manufacturer)}</small></span><em>${esc(product.category)}</em></a>`).join('')}<p class="list-footnote">Showing the first 120 rows for a fast admin list. Search/import can be connected to the relational API in production.</p></div>${selected ? `<form class="form-card admin-editor" data-form="admin-product" data-id="${selected.id}"><div class="form-card-heading"><div><p class="eyebrow">Edit product</p><h2>${esc(selected.name)}</h2><p>${esc(selected.manufacturer)} · PDF page ${selected.sourcePage}</p></div></div><div class="form-grid"><label>Category<select name="category">${categories.map((category) => `<option ${selected.category === category.name ? 'selected' : ''}>${esc(category.name)}</option>`).join('')}</select></label><label>Subcategory<input name="subcategory" value="${esc(selected.subcategory)}" /></label><label>Brand<input name="brand" value="${esc(selected.brand || '')}" placeholder="Not configured" /></label><label>Pack size<input name="packSize" value="${esc(selected.packSize || '')}" placeholder="Not configured" /></label><label>Price<input name="price" type="number" min="0" value="${selected.price ?? ''}" placeholder="Blank until verified" /></label><label>Wholesale price<input name="wholesalePrice" type="number" min="0" value="${selected.wholesalePrice ?? ''}" placeholder="Blank until verified" /></label><label>MOQ<input name="moq" type="number" min="1" value="${selected.moq ?? ''}" placeholder="Blank until verified" /></label><label>GST<input name="gst" value="${esc(selected.gst || '')}" placeholder="Blank until verified" /></label><label>Stock status<select name="stockStatus"><option value="not-configured" ${selected.stockStatus === 'not-configured' ? 'selected' : ''}>Not configured</option><option value="in-stock" ${selected.stockStatus === 'in-stock' ? 'selected' : ''}>In stock</option><option value="out-of-stock" ${selected.stockStatus === 'out-of-stock' ? 'selected' : ''}>Out of stock</option></select></label><label>Purchase mode<select name="purchaseMode"><option value="quote" ${selected.purchaseMode === 'quote' ? 'selected' : ''}>Request quote</option><option value="direct" ${selected.purchaseMode === 'direct' ? 'selected' : ''}>Direct purchase</option><option value="enquiry" ${selected.purchaseMode === 'enquiry' ? 'selected' : ''}>Enquiry only</option></select></label><label class="full-span">Description<textarea name="description" rows="4" placeholder="Admin-approved description">${esc(selected.description || '')}</textarea></label></div>${renderProductImageManager(selected)}<label class="checkbox-line"><input type="checkbox" name="active" ${selected.active !== false ? 'checked' : ''} /> Active in customer catalog</label><button class="button button-dark" type="submit">Save product fields</button><p class="form-footnote">Product photos are uploaded to the private Supabase product-images bucket and published only after verified records are returned by the catalog API.</p></form>` : ''}</div><div class="admin-import"><div><p class="eyebrow">Bulk import</p><h2>CSV / Excel-ready intake</h2><p>CSV import works in this browser preview. The production adapter accepts the same columns from CSV or Excel and validates rows server-side before publishing.</p></div><form data-form="admin-import"><label class="upload-drop compact-upload"><input type="file" name="file" accept=".csv,.xlsx,.xls,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" required /><span class="upload-icon">CSV</span><strong>Choose CSV or Excel</strong><small>CSV rows are validated here. Excel is handed to the production import adapter.</small></label><button class="button button-ghost" type="submit">Import file</button></form></div></div>`;
 }
 
 function renderAdminDeliveries() {
@@ -951,15 +931,8 @@ function renderAdminDeliveries() {
 
 function renderAdminGallery() {
   const products = getProducts();
-  const candidateRows = [
-    ...Object.entries(state.imageCandidates || {}).flatMap(([productId, candidates]) => (candidates || []).map((candidate, index) => ({ productId, candidate, index, candidateSource: 'session' }))),
-    ...Object.entries(imageManifest.products || {}).flatMap(([productId, record]) => (record.images || []).map((candidate, index) => ({ productId, candidate, index, candidateSource: 'manifest' }))),
-  ];
-  const selectedProductId = pathInfo().query.get('product') || '';
-  const visibleCandidates = candidateRows.filter((row) => !selectedProductId || row.productId === selectedProductId);
-  const galleryRows = state.gallery.map((item) => { const product = getProduct(item.productId); return product ? `<div class="admin-gallery-row"><div class="admin-gallery-thumb">${item.dataUrl || item.url ? `<img src="${esc(item.dataUrl || item.url)}" alt="${esc(product.name)}" loading="lazy" />` : placeholderArt('Image', true)}</div><div><strong>${esc(product.name)}</strong><span>${esc(item.source || 'admin_upload')} · ${imageStatusLabel(item)}</span>${item.sourceUrl ? `<a href="${esc(item.sourceUrl)}" target="_blank" rel="noreferrer">View source</a>` : ''}</div><div class="admin-card-actions"><button class="button button-ghost button-small" data-action="${item.verified === true ? 'unverify-image' : 'verify-image'}" data-id="${item.id}">${item.verified === true ? 'Mark unverified' : 'Mark verified'}</button><button class="button button-ghost button-small" data-action="set-main-image" data-id="${item.id}">Set as main</button><button class="remove-link" data-action="delete-gallery" data-id="${item.id}">Remove</button></div></div>` : ''; }).join('');
-  const candidateCards = visibleCandidates.map(({ productId, candidate, index, candidateSource }) => { const product = getProduct(productId); return product ? `<article class="image-candidate-card"><img src="${esc(candidate.thumbnailUrl || candidate.imageUrl)}" alt="${esc(candidate.altText || product.name)}" loading="lazy" /><div><span class="tag">Candidate · ${esc(candidate.source || 'provider')}</span><h3>${esc(product.name)}</h3><p>${esc(product.manufacturer)}</p><small>Unverified until admin review</small><div class="admin-card-actions"><button class="button button-primary button-small" data-action="use-image-candidate" data-product-id="${productId}" data-candidate-index="${index}" data-candidate-source="${candidateSource}">Use for product</button><a class="button button-ghost button-small" href="${esc(candidate.sourceUrl || candidate.imageUrl)}" target="_blank" rel="noreferrer">View source</a></div></div></article>` : ''; }).join('');
-  return `<div class="admin-section-heading"><div><p class="eyebrow">Gallery management</p><h2>Link images to products</h2><p>Discover candidates automatically, then verify or replace them before they become customer-visible.</p></div></div><div class="admin-gallery-layout"><form class="form-card" data-form="admin-gallery"><div class="form-grid"><label class="full-span">Related product<select name="productId" required><option value="">Select product</option>${products.map((product) => `<option value="${product.id}">${esc(product.name)} - ${esc(product.manufacturer)}</option>`).join('')}</select></label><label class="full-span upload-drop"><input name="file" type="file" accept="image/jpeg,image/png" capture="environment" required /><span class="upload-icon">IMG</span><strong>Upload or replace image</strong><small>JPEG or PNG. Stored via cloud adapter in production.</small></label><label class="checkbox-line full-span"><input name="replace" type="checkbox" /> Replace current primary image</label></div><button class="button button-dark" type="submit">Add linked image</button></form><div class="admin-gallery-list">${galleryRows || '<div class="mini-empty"><p>No linked images yet. Run automatic discovery or add an approved upload.</p></div>'}</div></div>${candidateCards ? `<section class="image-candidate-section"><div class="admin-section-heading"><div><p class="eyebrow">Automatic candidates</p><h2>Review before publishing</h2><p>These results are sourced with the exact manufacturer and product name. They remain private until you choose and verify one.</p></div></div><div class="image-candidate-grid">${candidateCards}</div></section>` : ''}`;
+  const rows = products.filter((product) => imageRecordsFor(product).length).map((product) => `<a class="admin-gallery-row" href="#/admin?tab=products&product=${encodeURIComponent(product.id)}"><div class="admin-gallery-thumb">${productArt(product, true)}</div><div><strong>${esc(product.name)}</strong><span>${imageRecordsFor(product).length} verified image${imageRecordsFor(product).length === 1 ? '' : 's'} · ${esc(product.manufacturer)}</span></div><span class="text-link">Edit product <span>↗</span></span></a>`).join('');
+  return `<div class="admin-section-heading"><div><p class="eyebrow">Product imagery</p><h2>Product Images</h2><p>Choose a product to upload, replace, set as primary or delete its manual photos. Product Images is managed from the product editor.</p></div><a class="button button-primary button-small" href="#/admin?tab=products">Open product editor <span>↗</span></a></div><div class="admin-gallery-list">${rows || '<div class="mini-empty"><p>No verified product photos are connected yet. Open Product Management and choose a catalog row to upload the first image.</p></div>'}</div><div class="admin-image-policy"><p class="eyebrow">Publishing policy</p><h3>Private storage, verified catalog records</h3><p>Uploads are stored in Supabase Storage under <code>product-images/{productId}/</code>. Customer pages only render active HTTP or HTTPS URLs returned by the verified catalog query.</p></div>`;
 }
 
 function renderAdminQuotes() {
@@ -1031,25 +1004,76 @@ function downloadCatalogCsv() {
   URL.revokeObjectURL(url);
 }
 
-async function discoverImageCandidates(productId) {
-  const product = getProduct(productId);
-  if (!product) return;
-  toast('Searching exact manufacturer and product name…');
-  try {
-    const response = await fetch('/api/image-search', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ productId, name: product.name, manufacturer: product.manufacturer, category: product.category, subcategory: product.subcategory, limit: 6 }),
-    });
-    const result = await response.json();
-    if (!response.ok || !result.ok) throw new Error(result.error || 'Image search failed.');
-    state.imageCandidates[productId] = result.candidates || [];
-    saveState();
-    toast(result.candidates?.length ? `${result.candidates.length} candidate images saved for review.` : 'No verified provider results. The safe placeholder remains active.', result.candidates?.length ? 'success' : 'info');
-    renderShell();
-  } catch (error) {
-    toast(error instanceof Error ? error.message : 'Image search is unavailable.', 'error');
-  }
+function imageMimeFor(file) {
+  const extension = String(file?.name || '').split('.').pop().toLowerCase();
+  return file?.type || ({ jpg: 'image/jpeg', jpeg: 'image/jpeg', png: 'image/png', webp: 'image/webp' }[extension] || '');
+}
+
+function validateProductImageFiles(files, maxCount = 5) {
+  const selected = Array.from(files || []);
+  const allowed = new Set(['image/jpeg', 'image/png', 'image/webp']);
+  if (!selected.length) throw new Error('Choose at least one product image.');
+  if (selected.length > maxCount) throw new Error(`Choose no more than ${maxCount} images at a time.`);
+  selected.forEach((file) => {
+    if (!allowed.has(imageMimeFor(file))) throw new Error(`${file.name} is not a JPG, PNG or WEBP image.`);
+    if (file.size > 5 * 1024 * 1024) throw new Error(`${file.name} is larger than 5 MB.`);
+  });
+  return selected;
+}
+
+async function fileToUploadPayload(file) {
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  let binary = '';
+  const chunkSize = 0x8000;
+  for (let index = 0; index < bytes.length; index += chunkSize) binary += String.fromCharCode(...bytes.subarray(index, index + chunkSize));
+  return { fileName: file.name, contentType: imageMimeFor(file), data: btoa(binary) };
+}
+
+function renderUploadQueue(input) {
+  const preview = document.querySelector(`[data-upload-preview="${CSS.escape(input.id)}"]`);
+  if (!preview) return;
+  if (!Array.isArray(input.__selectedFiles)) input.__selectedFiles = Array.from(input.files || []);
+  input.__previewUrls?.forEach((url) => URL.revokeObjectURL(url));
+  input.__previewUrls = input.__selectedFiles.map((file) => URL.createObjectURL(file));
+  preview.innerHTML = input.__selectedFiles.map((file, index) => `<article class="upload-preview-card"><img src="${esc(input.__previewUrls[index])}" alt="${esc(file.name)}" /><div><strong>${esc(file.name)}</strong><small>${formatBytes(file.size)}</small></div><button type="button" class="upload-preview-remove" data-action="remove-upload-preview" data-input-id="${esc(input.id)}" data-file-index="${index}" aria-label="Remove ${esc(file.name)}">×</button></article>`).join('');
+  preview.hidden = !input.__selectedFiles.length;
+}
+
+async function uploadProductImages(productId, input) {
+  const files = validateProductImageFiles(input.__selectedFiles || input.files);
+  if (!supabaseReady() || !sessionAccessToken()) throw new Error('Sign in as an administrator before uploading product images.');
+  const images = await Promise.all(files.map(fileToUploadPayload));
+  await authenticatedApi(`/api/admin/products/${encodeURIComponent(productId)}/images`, { method: 'POST', body: { images } });
+  input.value = '';
+  input.__selectedFiles = [];
+  renderUploadQueue(input);
+  await loadSupabaseCatalog();
+  toast('Product images uploaded and published.', 'success');
+  renderShell();
+}
+
+async function replaceProductImage(productId, imageId, file) {
+  const files = validateProductImageFiles([file], 1);
+  if (!supabaseReady() || !sessionAccessToken()) throw new Error('Sign in as an administrator before replacing product images.');
+  await authenticatedApi(`/api/admin/products/${encodeURIComponent(productId)}/images`, { method: 'POST', body: { replaceImageId: imageId, images: [await fileToUploadPayload(files[0])] } });
+  await loadSupabaseCatalog();
+  toast('Product image replaced.', 'success');
+  renderShell();
+}
+
+async function updateRemoteImagePrimary(productId, imageId) {
+  await authenticatedApi(`/api/admin/products/${encodeURIComponent(productId)}/images/${encodeURIComponent(imageId)}/primary`, { method: 'PUT' });
+  await loadSupabaseCatalog();
+  toast('Primary product image updated.', 'success');
+  renderShell();
+}
+
+async function deleteRemoteImage(productId, imageId) {
+  if (!window.confirm('Delete this product image from Storage and the catalog?')) return;
+  const result = await authenticatedApi(`/api/admin/products/${encodeURIComponent(productId)}/images/${encodeURIComponent(imageId)}`, { method: 'DELETE' });
+  await loadSupabaseCatalog();
+  toast(result.storageDeleted === false ? 'Image record deleted; the storage object needs cleanup.' : 'Product image deleted.', result.storageDeleted === false ? 'info' : 'success');
+  renderShell();
 }
 
 document.addEventListener('click', (event) => {
@@ -1086,6 +1110,17 @@ document.addEventListener('click', (event) => {
     navigate(`/products?query=${encodeURIComponent(actionTarget.dataset.query || '')}`);
   } else if (action === 'open-product') {
     navigate(`/product/${actionTarget.dataset.id}`);
+  } else if (action === 'select-detail-image') {
+    const image = document.querySelector('.detail-main-art img');
+    if (image) image.src = actionTarget.dataset.imageUrl;
+    document.querySelectorAll('.detail-thumb').forEach((button) => button.classList.toggle('is-active', button === actionTarget));
+  } else if (action === 'previous-detail-image' || action === 'next-detail-image') {
+    const thumbs = [...document.querySelectorAll('.detail-thumb')];
+    if (thumbs.length > 1) {
+      const current = Math.max(0, thumbs.findIndex((button) => button.classList.contains('is-active')));
+      const offset = action === 'next-detail-image' ? 1 : -1;
+      thumbs[(current + offset + thumbs.length) % thumbs.length].click();
+    }
   } else if (action === 'add-cart') {
     addToCart(actionTarget.dataset.id);
   } else if (action === 'buy-now') {
@@ -1139,38 +1174,19 @@ document.addEventListener('click', (event) => {
     navigate('/');
   } else if (action === 'open-delivery-form') {
     navigate(`/account?delivery=${encodeURIComponent(actionTarget.dataset.id)}`);
-  } else if (action === 'discover-images') {
-    void discoverImageCandidates(actionTarget.dataset.id);
-  } else if (action === 'use-image-candidate') {
-    const productId = actionTarget.dataset.productId;
-    const candidates = actionTarget.dataset.candidateSource === 'manifest'
-      ? imageManifest.products?.[productId]?.images || []
-      : state.imageCandidates?.[productId] || [];
-    const candidate = candidates[Number(actionTarget.dataset.candidateIndex)];
-    if (candidate) {
-      state.gallery.push({ id: `gallery-${Date.now()}`, productId, url: candidate.imageUrl, source: candidate.source, sourceUrl: candidate.sourceUrl, altText: candidate.altText, active: true, verified: false, imageStatus: 'pending_review', isPrimary: false });
-      saveState();
-      toast('Candidate linked as pending review.', 'success');
-      renderShell();
+  } else if (action === 'remove-upload-preview') {
+    const input = document.getElementById(actionTarget.dataset.inputId);
+    if (input) {
+      input.__selectedFiles = (input.__selectedFiles || []).filter((_, index) => index !== Number(actionTarget.dataset.fileIndex));
+      renderUploadQueue(input);
     }
-  } else if (action === 'verify-image' || action === 'unverify-image') {
-    const image = state.gallery.find((item) => item.id === actionTarget.dataset.id);
-    if (image) {
-      image.verified = action === 'verify-image';
-      image.imageStatus = action === 'verify-image' ? 'verified' : 'unverified';
-      saveState();
-      toast(action === 'verify-image' ? 'Image verified and published.' : 'Image marked unverified and hidden from customers.', action === 'verify-image' ? 'success' : 'info');
-      renderShell();
-    }
-  } else if (action === 'set-main-image') {
-    const image = state.gallery.find((item) => item.id === actionTarget.dataset.id);
-    if (image) {
-      state.gallery.filter((item) => item.productId === image.productId).forEach((item) => { item.isPrimary = false; });
-      image.isPrimary = true;
-      saveState();
-      toast('Primary image updated.', 'success');
-      renderShell();
-    }
+  } else if (action === 'upload-product-images') {
+    const input = document.getElementById(actionTarget.dataset.inputId);
+    if (input) void uploadProductImages(actionTarget.dataset.productId, input).catch((error) => toast(error instanceof Error ? error.message : 'Product image upload failed.', 'error'));
+  } else if (action === 'set-remote-primary') {
+    void updateRemoteImagePrimary(actionTarget.dataset.productId, actionTarget.dataset.imageId).catch((error) => toast(error instanceof Error ? error.message : 'Primary image update failed.', 'error'));
+  } else if (action === 'delete-remote-image') {
+    void deleteRemoteImage(actionTarget.dataset.productId, actionTarget.dataset.imageId).catch((error) => toast(error instanceof Error ? error.message : 'Product image deletion failed.', 'error'));
   } else if (action === 'approve-delivery' || action === 'reject-delivery') {
     const delivery = state.deliveries.find((item) => item.id === actionTarget.dataset.id);
     if (delivery) delivery.status = action === 'approve-delivery' ? 'approved' : 'rejected';
@@ -1179,10 +1195,6 @@ document.addEventListener('click', (event) => {
     renderShell();
   } else if (action === 'delete-delivery') {
     state.deliveries = state.deliveries.filter((item) => item.id !== actionTarget.dataset.id);
-    saveState();
-    renderShell();
-  } else if (action === 'delete-gallery') {
-    state.gallery = state.gallery.filter((item) => item.id !== actionTarget.dataset.id);
     saveState();
     renderShell();
   } else if (action === 'download-csv') {
@@ -1205,6 +1217,24 @@ document.addEventListener('input', (event) => {
 
 document.addEventListener('change', (event) => {
   const target = event.target;
+  if (target.matches('[data-product-upload]')) {
+    try {
+      target.__selectedFiles = validateProductImageFiles(target.files);
+      renderUploadQueue(target);
+    } catch (error) {
+      target.value = '';
+      target.__selectedFiles = [];
+      renderUploadQueue(target);
+      toast(error instanceof Error ? error.message : 'Choose valid product image files.', 'error');
+    }
+    return;
+  }
+  if (target.matches('[data-replace-upload]')) {
+    const file = target.files?.[0];
+    target.value = '';
+    if (file) void replaceProductImage(target.dataset.productId, target.dataset.imageId, file).catch((error) => toast(error instanceof Error ? error.message : 'Product image replacement failed.', 'error'));
+    return;
+  }
   if (target.matches('[data-order-status]')) {
     const order = state.orders.find((item) => item.id === target.dataset.id);
     if (order) order.status = target.value;
@@ -1363,21 +1393,11 @@ document.addEventListener('submit', async (event) => {
     saveState();
     toast('CSV rows imported into the local admin catalog.', 'success');
     renderShell();
-  } else if (formName === 'admin-gallery') {
-    const file = form.querySelector('input[type="file"]').files[0];
-    if (!file) return;
-    const [dataUrl] = await readFiles([file]);
-    if (data.replace === 'on') state.gallery = state.gallery.filter((item) => item.productId !== data.productId);
-    state.gallery.push({ id: `gallery-${Date.now()}`, productId: data.productId, dataUrl, active: true, verified: true, imageStatus: 'verified', source: 'admin_upload', sourceUrl: '', isPrimary: true });
-    saveState();
-    toast(data.replace === 'on' ? 'Primary image replaced.' : 'Linked gallery image added and verified.', 'success');
-    renderShell();
   }
 });
 
 window.addEventListener('hashchange', renderShell);
 window.addEventListener('scroll', () => document.querySelector('.site-header')?.classList.toggle('is-scrolled', window.scrollY > 18), { passive: true });
 renderShell();
-void loadImageManifest();
 void loadSupabaseCatalog();
 void hydrateSupabaseSession();

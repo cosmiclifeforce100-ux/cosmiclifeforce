@@ -10,7 +10,6 @@
     "dev": "node server.mjs",
     "start": "node server.mjs",
     "build": "node scripts/build-check.mjs",
-    "test": "node scripts/test.mjs",
-    "images:discover": "node scripts/discover-images.mjs"
+    "test": "node scripts/test.mjs"
   }
 }

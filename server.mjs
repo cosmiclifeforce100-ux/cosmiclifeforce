@@ -2,7 +2,8 @@ import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { requireSupabaseUser, supabasePublicConfig, supabaseRequest } from './server/supabase.mjs';
+import { requireSupabaseUser, supabasePublicConfig, supabaseRequest, supabaseStorageSignedUrl } from './server/supabase.mjs';
+import { deleteProductImage, setProductImagePrimary, uploadProductImages, PRODUCT_IMAGE_BUCKET } from './server/product-images.mjs';
 import { razorpayPublicConfig } from './server/razorpay.mjs';
 import { cancelRazorpayPayment, createRazorpayOrder, getRazorpayPaymentStatus, processRazorpayWebhook, verifyRazorpayPayment } from './server/payments.mjs';
 
@@ -33,8 +34,6 @@ const publicConfig = {
   razorpayKeyId: razorpay.keyId,
   razorpayTestMode: razorpay.testMode,
   razorpayWebhookConfigured: razorpay.webhookConfigured,
-  imageSearchProvider: process.env.IMAGE_SEARCH_PROVIDER || 'none',
-  imageSearchConfigured: Boolean(process.env.PEXELS_API_KEY || process.env.IMAGE_SEARCH_ENDPOINT),
   supabaseEnabled: supabase.enabled,
   supabaseUrl: supabase.url,
   supabaseAnonKey: supabase.anonKey,
@@ -71,63 +70,6 @@ async function readRaw(request) {
   return Buffer.concat(chunks).toString('utf8');
 }
 
-function imageQuery(payload) {
-  const manufacturer = String(payload.manufacturer || '').trim();
-  const name = String(payload.name || '').trim();
-  const category = String(payload.category || '').trim();
-  const subcategory = String(payload.subcategory || '').trim();
-  if (!name || !manufacturer) throw new Error('Manufacturer and exact product name are required.');
-  return [manufacturer, name, subcategory || category].filter(Boolean).join(' ');
-}
-
-function normalizeImageCandidate(item, provider, query) {
-  const src = item.src || item.images || {};
-  const imageUrl = item.image_url || item.imageUrl || item.url || src.medium || src.large || src.original || src.small;
-  if (!imageUrl || !/^https?:\/\//i.test(imageUrl)) return null;
-  return {
-    imageUrl,
-    thumbnailUrl: item.thumbnail_url || item.thumbnailUrl || src.small || src.medium || imageUrl,
-    source: provider,
-    sourceUrl: item.source_url || item.sourceUrl || item.page_url || item.pageUrl || item.photographer_url || '',
-    altText: item.alt || item.altText || item.description || query,
-    verified: false,
-    imageStatus: 'pending_review',
-    isPrimary: false,
-  };
-}
-
-async function searchImageCandidates(payload) {
-  const provider = String(process.env.IMAGE_SEARCH_PROVIDER || 'none').toLowerCase();
-  const query = imageQuery(payload);
-  const limit = Math.min(Math.max(Number(payload.limit || 6), 1), 12);
-  const timeout = Math.min(Math.max(Number(process.env.IMAGE_SEARCH_TIMEOUT_MS || 8000), 1000), 20000);
-  if (provider === 'none' && !process.env.IMAGE_SEARCH_ENDPOINT) return { configured: false, provider: 'none', query, candidates: [] };
-
-  let response;
-  if (provider === 'pexels') {
-    if (!process.env.PEXELS_API_KEY) throw new Error('PEXELS_API_KEY is not configured.');
-    const endpoint = new URL('https://api.pexels.com/v1/search');
-    endpoint.searchParams.set('query', query);
-    endpoint.searchParams.set('per_page', String(limit));
-    response = await fetch(endpoint, { headers: { Authorization: process.env.PEXELS_API_KEY }, signal: AbortSignal.timeout(timeout) });
-  } else if (process.env.IMAGE_SEARCH_ENDPOINT) {
-    const endpoint = new URL(process.env.IMAGE_SEARCH_ENDPOINT);
-    endpoint.searchParams.set('q', query);
-    endpoint.searchParams.set('query', query);
-    endpoint.searchParams.set('limit', String(limit));
-    const headers = { Accept: 'application/json' };
-    if (process.env.IMAGE_SEARCH_API_KEY) headers.Authorization = `Bearer ${process.env.IMAGE_SEARCH_API_KEY}`;
-    response = await fetch(endpoint, { headers, signal: AbortSignal.timeout(timeout) });
-  } else {
-    throw new Error(`Unsupported image search provider: ${provider}`);
-  }
-  if (!response.ok) throw new Error(`Image provider returned HTTP ${response.status}.`);
-  const data = await response.json();
-  const items = data.photos || data.images || data.results || data.items || [];
-  const candidates = items.map((item) => normalizeImageCandidate(item, provider === 'none' ? 'custom' : provider, query)).filter(Boolean).slice(0, limit);
-  return { configured: true, provider, query, candidates };
-}
-
 function serveFile(response, filePath) {
   fs.readFile(filePath, (error, data) => {
     if (error) return send(response, 404, 'Not found');
@@ -142,7 +84,7 @@ const server = http.createServer(async (request, response) => {
     return send(response, 200, `window.RUNTIME_CONFIG = ${JSON.stringify(publicConfig)};`, 'text/javascript; charset=utf-8');
   }
   if (url.pathname === '/api/health') {
-    return sendJson(response, 200, { ok: true, service: 'cosmic-life-force', databaseConfigured: Boolean(process.env.DATABASE_URL || supabase.enabled), storageConfigured: Boolean(process.env.STORAGE_BUCKET || (supabase.enabled && process.env.SUPABASE_URL)), supabaseEnabled: supabase.enabled, razorpayEnabled: razorpay.enabled, razorpayTestMode: razorpay.testMode, razorpayWebhookConfigured: razorpay.webhookConfigured, imageSearchConfigured: publicConfig.imageSearchConfigured, imageSearchProvider: publicConfig.imageSearchProvider });
+    return sendJson(response, 200, { ok: true, service: 'cosmic-life-force', databaseConfigured: Boolean(process.env.DATABASE_URL || supabase.enabled), storageConfigured: Boolean(process.env.STORAGE_BUCKET || (supabase.enabled && process.env.SUPABASE_URL)), supabaseEnabled: supabase.enabled, razorpayEnabled: razorpay.enabled, razorpayTestMode: razorpay.testMode, razorpayWebhookConfigured: razorpay.webhookConfigured, productImageBucket: PRODUCT_IMAGE_BUCKET });
   }
   if (url.pathname === '/api/catalog' && request.method === 'GET') {
     try {
@@ -152,25 +94,36 @@ const server = http.createServer(async (request, response) => {
       if (productIds.length) {
         try {
           const encodedIds = productIds.join(',');
-          images = await supabaseRequest(`/rest/v1/product_images?product_id=in.(${encodedIds})&active=eq.true&verified=eq.true&image_status=eq.verified&select=product_id,public_url,alt_text,image_type,source,source_url,is_primary&order=is_primary.desc,sort_order.asc,created_at.asc`);
+          images = await supabaseRequest(`/rest/v1/product_images?product_id=in.(${encodedIds})&active=eq.true&verified=eq.true&image_status=eq.verified&select=id,product_id,storage_key,public_url,alt_text,image_type,source,source_url,is_primary,sort_order&order=is_primary.desc,sort_order.asc,created_at.asc`);
         } catch {
           images = [];
         }
       }
       const imageMap = new Map();
-      images.forEach((image) => {
-        if (!/^https?:\/\//i.test(image.public_url || '')) return;
+      for (const image of images) {
+        let imageUrl = image.public_url || '';
+        if (image.storage_key) {
+          try {
+            imageUrl = await supabaseStorageSignedUrl(PRODUCT_IMAGE_BUCKET, image.storage_key);
+          } catch {
+            imageUrl = image.public_url || '';
+          }
+        }
+        if (!/^https?:\/\//i.test(imageUrl)) continue;
         const list = imageMap.get(image.product_id) || [];
-        list.push(image);
+        list.push({ ...image, imageUrl });
         imageMap.set(image.product_id, list);
-      });
+      }
       return sendJson(response, 200, {
         ok: true,
         source: 'supabase',
         products: products.map((product) => ({
           ...product,
           images: (imageMap.get(product.id) || []).map((image) => ({
-            imageUrl: image.public_url,
+            id: image.id,
+            storageKey: image.storage_key,
+            imageUrl: image.imageUrl,
+            publicUrl: image.public_url,
             altText: image.alt_text,
             imageType: image.image_type,
             source: image.source,
@@ -266,19 +219,34 @@ const server = http.createServer(async (request, response) => {
       return sendJson(response, error.status || 400, { ok: false, error: error instanceof Error ? error.message : 'Unable to read payment status.' });
     }
   }
-  if (url.pathname === '/api/image-search' && request.method === 'POST') {
-    if (process.env.IMAGE_SEARCH_ADMIN_TOKEN && request.headers['x-image-search-token'] !== process.env.IMAGE_SEARCH_ADMIN_TOKEN) {
-      return sendJson(response, 401, { ok: false, error: 'Image search authorization is required.' });
-    }
+  const imageRoute = url.pathname.match(/^\/api\/admin\/products\/([^/]+)\/images(?:\/([^/]+))?(?:\/primary)?$/);
+  if (imageRoute && request.method === 'POST' && !imageRoute[2]) {
     try {
-      const payload = await readJson(request);
-      return sendJson(response, 200, { ok: true, ...(await searchImageCandidates(payload)) });
+      await requireSupabaseUser(request, { admin: true });
+      return sendJson(response, 200, { ok: true, images: await uploadProductImages(decodeURIComponent(imageRoute[1]), await readJson(request)) });
     } catch (error) {
-      return sendJson(response, 400, { ok: false, error: error instanceof Error ? error.message : 'Image search failed.' });
+      return sendJson(response, error.status || 400, { ok: false, error: error instanceof Error ? error.message : 'Product image upload failed.' });
     }
   }
+  if (imageRoute && imageRoute[2] && url.pathname.endsWith('/primary') && request.method === 'PUT') {
+    try {
+      await requireSupabaseUser(request, { admin: true });
+      return sendJson(response, 200, { ok: true, images: await setProductImagePrimary(decodeURIComponent(imageRoute[1]), decodeURIComponent(imageRoute[2])) });
+    } catch (error) {
+      return sendJson(response, error.status || 400, { ok: false, error: error instanceof Error ? error.message : 'Primary image update failed.' });
+    }
+  }
+  if (imageRoute && imageRoute[2] && request.method === 'DELETE') {
+    try {
+      await requireSupabaseUser(request, { admin: true });
+      return sendJson(response, 200, { ok: true, ...(await deleteProductImage(decodeURIComponent(imageRoute[1]), decodeURIComponent(imageRoute[2]))) });
+    } catch (error) {
+      return sendJson(response, error.status || 400, { ok: false, error: error instanceof Error ? error.message : 'Product image deletion failed.' });
+    }
+  }
+  if (url.pathname.startsWith('/api/')) return sendJson(response, 404, { ok: false, error: 'API route not found.' });
   const requested = decodeURIComponent(url.pathname === '/' ? '/index.html' : url.pathname);
-  const staticPath = requested.startsWith('/assets/') || requested === '/image-manifest.json'
+  const staticPath = requested.startsWith('/assets/')
     ? `/public${requested}`
     : requested;
   const filePath = path.resolve(root, `.${staticPath}`);
