@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "node server.mjs",
     "start": "node server.mjs",
-    "build": "node scripts/build-check.mjs",
+    "build": "node scripts/build-worker-assets.mjs && node scripts/build-check.mjs",
     "test": "node scripts/test.mjs",
     "build:worker": "node scripts/build-worker-assets.mjs",
     "worker:check": "npm run build:worker && node scripts/check-worker.mjs",
