@@ -15,6 +15,16 @@ assert.match(appSource, /cosmic-life-force-reference\.jpeg/);
 assert.match(appSource, /Quality medical and healthcare products at competitive wholesale prices/);
 assert.match(appSource, /Search medicines, healthcare products, orthopedic products/);
 assert.match(appSource, /renderQuickCategories/);
+assert.match(appSource, /categoryVisuals/);
+const categoryAssetNames = [
+  'medicines', 'healthcare-essentials', 'medical-devices', 'surgical-supplies',
+  'ppe', 'diagnostic-products', 'orthopedic-products', 'dental-products',
+  'hospital-equipment', 'disposables', 'ayurvedic-wellness', 'baby-maternity',
+];
+for (const assetName of categoryAssetNames) {
+  assert.ok(fs.existsSync(`public/assets/categories/${assetName}.webp`), `Missing category artwork: ${assetName}`);
+  assert.ok(fs.existsSync(`public/assets/categories/reference/${assetName}.png`), `Missing reference category artwork: ${assetName}`);
+}
 assert.match(appSource, /loadSupabaseCatalog/);
 assert.match(fs.readFileSync('server.mjs', 'utf8'), /\/api\/catalog/);
 const stylesSource = fs.readFileSync('styles.css', 'utf8');
