@@ -10,6 +10,11 @@
     "dev": "node server.mjs",
     "start": "node server.mjs",
     "build": "node scripts/build-check.mjs",
-    "test": "node scripts/test.mjs"
+    "test": "node scripts/test.mjs",
+    "build:worker": "node scripts/build-worker-assets.mjs",
+    "worker:check": "npm run build:worker && node scripts/check-worker.mjs",
+    "worker:dry-run": "npm run build:worker && npx wrangler deploy --dry-run",
+    "worker:dev": "npm run build:worker && npx wrangler dev",
+    "worker:deploy": "npm run build:worker && npx wrangler deploy"
   }
 }

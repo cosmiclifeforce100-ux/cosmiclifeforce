@@ -6,4 +6,5 @@ npm-debug.log*
 *.log
 public/uploads/
 .wrangler/
+.worker-assets/
 .dev.vars

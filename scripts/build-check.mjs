@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { catalogMeta, catalogProducts, sourceRows } from '../data/catalog.js';
 
-const required = ['index.html', 'app.js', 'styles.css', 'server.mjs', 'schema.sql', '.env.example', 'README.md', 'public/assets/cosmic-life-force-logo.jpeg', 'public/assets/cosmic-life-force-reference.jpeg'];
+const required = ['index.html', 'app.js', 'styles.css', 'server.mjs', 'worker.mjs', 'wrangler.toml', 'schema.sql', '.env.example', 'README.md', 'public/assets/cosmic-life-force-logo.jpeg', 'public/assets/cosmic-life-force-reference.jpeg'];
 const missing = required.filter((file) => !fs.existsSync(path.resolve(file)));
 if (missing.length) throw new Error(`Missing required files: ${missing.join(', ')}`);
 if (!catalogProducts.length || !sourceRows.length) throw new Error('Catalog data is empty.');

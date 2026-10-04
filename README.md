@@ -14,6 +14,7 @@ Production-oriented B2B medical-products storefront built from the supplied Cosm
 - Responsive product gallery with lazy-loaded cards, product-linked image records and a relational `product_images` model.
 - `schema.sql` with relationships, foreign keys, checks and indexes for PostgreSQL production wiring.
 - `server.mjs` with `/api/health` and environment-backed public integration configuration. Secrets are never sent to the browser.
+- `worker.mjs` and `wrangler.toml` for a Cloudflare Workers deployment that reuses the existing Supabase and Razorpay adapters without replacing the local Node server.
 - Optional Supabase Auth/profile integration through `/api/auth/session` and `/api/profile`, with server-side bearer verification and admin route gating when Supabase is configured.
 - Additive Supabase RLS/storage migration at `supabase/migrations/20260930000100_auth_rls_storage.sql`. Review it against the existing Supabase schema before applying it.
 - Razorpay TEST mode payment flow with server-side order creation, database price validation, signature verification, webhook idempotency and separate payment/order statuses. The additive payment migration is `supabase/migrations/20260930000200_razorpay_payments.sql`.
@@ -54,34 +55,38 @@ RAZORPAY_API_BASE_URL=https://api.razorpay.com
 
 The server rejects non-`rzp_test_` keys. The secret is never included in `/config.js` or frontend code. Configure the Razorpay TEST webhook URL as `<temporary-deployment-url>/api/payments/razorpay/webhook` and keep webhook signing enabled.
 7. Set `WHATSAPP_BUSINESS_NUMBER` once. Product enquiry links are generated from that single runtime value.
-8. Preserve the existing GitHub repository and Cloudflare deployment. This local workspace now has a `main` Git branch but no remote Git or Cloudflare configuration, so connect the actual repository/domain rather than guessing. See [the production setup runbook](docs/supabase-cloudflare-github-production.md).
+8. Deploy the existing application through Cloudflare Workers using the checked-in `worker.mjs` and `wrangler.toml`. Hostinger remains the domain registrar/DNS provider only; do not deploy the application there. See the Cloudflare deployment section below and [the production setup runbook](docs/supabase-cloudflare-github-production.md).
 9. Add operational email/SMS and invoice generation in the server adapters before launch.
 
-## Hostinger deployment
+## Cloudflare Workers deployment
 
-This repository is a Node.js web app, not a static-only site. On Hostinger, use Websites -> Add Website -> Node.js Web App -> Import Git Repository, then select the GitHub repository and the main branch. Use these settings when Hostinger asks for them:
-
-```text
-Node.js version: 20 or newer
-Build command: npm run build
-Start command: npm start
-Port: use Hostinger's PORT value
-```
-
-Add the production environment variables in Hostinger's deployment settings. At minimum:
+The production Worker serves the frontend from the generated `.worker-assets/` directory and handles `/api/*` through `worker.mjs`. The directory contains only the frontend shell and `public/assets`; it does not expose the repository, `.env`, migrations or server source files. The Worker then calls Supabase over HTTPS and Razorpay over HTTPS using Cloudflare environment bindings.
 
 ```text
-APP_ORIGIN=https://your-domain.example
-SUPABASE_URL=https://your-project.supabase.co
-SUPABASE_ANON_KEY=your-public-anon-key
-SUPABASE_SERVICE_ROLE_KEY=server-only-service-role-key
+npm install
+npm test
+npm run build
+npm run worker:check
+npm run worker:dry-run
 ```
 
-Never commit .env, Supabase service-role keys, database passwords or payment secrets. After the first deployment, confirm https://your-domain.example/api/health reports ok: true and supabaseEnabled: true.
+`worker:dry-run` uses Wrangler's local bundle validation and does not deploy. When ready, authenticate Wrangler and configure the Worker environment values without putting them in this repository:
 
-If the domain is registered at Hostinger, point it from Domains -> Domain portfolio -> Manage -> DNS / Nameservers. If it is registered elsewhere, update DNS at that registrar. Hostinger's SSL certificate should be active before testing account creation or checkout.
+```text
+npx wrangler login
+npx wrangler secret put SUPABASE_URL
+npx wrangler secret put SUPABASE_ANON_KEY
+npx wrangler secret put SUPABASE_SERVICE_ROLE_KEY
+npx wrangler secret put APP_ORIGIN
+npx wrangler secret put WHATSAPP_BUSINESS_NUMBER
+npx wrangler secret put RAZORPAY_KEY_ID
+npx wrangler secret put RAZORPAY_KEY_SECRET
+npx wrangler secret put RAZORPAY_WEBHOOK_SECRET
+npx wrangler secret put RAZORPAY_API_BASE_URL
+npm run worker:deploy
+```
 
-Hostinger's Node.js GitHub deployment flow can redeploy from the selected branch after changes are pushed. Review the deployment settings and environment variables again whenever the app is redeployed.
+No custom domain is configured by `wrangler.toml`. After deployment, verify the temporary `workers.dev` URL at `/api/health`, then connect the existing Hostinger domain to this Worker through Cloudflare DNS/routes when you are ready. Never commit `.env`, Supabase service-role keys, database passwords, Cloudflare tokens or payment secrets.
 
 ## Source data rules
 
