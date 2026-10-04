@@ -16,6 +16,15 @@ assert.match(appSource, /Quality medical and healthcare products at competitive 
 assert.match(appSource, /Search medicines, healthcare products, orthopedic products/);
 assert.match(appSource, /renderQuickCategories/);
 assert.match(appSource, /categoryVisuals/);
+assert.match(appSource, /#\/forgot-password/);
+assert.match(appSource, /#\/reset-password/);
+assert.match(appSource, /path === '\/forgot-password'/);
+assert.match(appSource, /path === '\/reset-password'/);
+assert.match(appSource, /Forgot password\?/);
+assert.match(appSource, /supabaseAuth\('recover'/);
+assert.match(appSource, /auth\/v1\/user/);
+assert.match(appSource, /handleSupabaseCallback/);
+assert.doesNotMatch(appSource, /SUPABASE_SERVICE_ROLE_KEY/);
 const categoryAssetNames = [
   'medicines', 'healthcare-essentials', 'medical-devices', 'surgical-supplies',
   'ppe', 'diagnostic-products', 'orthopedic-products', 'dental-products',

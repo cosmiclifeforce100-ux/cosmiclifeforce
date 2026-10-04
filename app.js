@@ -4,6 +4,7 @@ const app = document.querySelector('#app');
 const runtime = window.RUNTIME_CONFIG || {};
 const STORAGE_KEY = 'cosmic-life-force-state';
 const SUPABASE_SESSION_KEY = 'cosmic-life-force-supabase-session';
+const SUPABASE_RECOVERY_SESSION_KEY = 'cosmic-life-force-supabase-recovery-session';
 const PENDING_RAZORPAY_KEY = 'cosmic-life-force-pending-razorpay';
 const DELIVERY_LOCATION_KEY = 'cosmic-life-force-delivery-location';
 const suppliedReferenceAsset = '/assets/cosmic-life-force-reference.jpeg';
@@ -95,6 +96,15 @@ let supabaseSession = (() => {
     return null;
   }
 })();
+let recoverySession = (() => {
+  try {
+    return JSON.parse(sessionStorage.getItem(SUPABASE_RECOVERY_SESSION_KEY) || 'null');
+  } catch {
+    return null;
+  }
+})();
+let authNotice = null;
+let authError = null;
 let remoteCatalogProducts = null;
 let catalogSource = 'pdf';
 
@@ -116,6 +126,28 @@ function storeSupabaseSession(session) {
   }
 }
 
+function storeRecoverySession(session) {
+  recoverySession = session || null;
+  try {
+    if (recoverySession) sessionStorage.setItem(SUPABASE_RECOVERY_SESSION_KEY, JSON.stringify(recoverySession));
+    else sessionStorage.removeItem(SUPABASE_RECOVERY_SESSION_KEY);
+  } catch {
+    // Password recovery remains usable when session storage is unavailable.
+  }
+}
+
+function authErrorMessage(data, status) {
+  const code = String(data?.error_code || data?.code || data?.error || '').toLowerCase();
+  const raw = String(data?.msg || data?.error_description || data?.message || '').trim();
+  if (code.includes('invalid_credentials') || raw.toLowerCase().includes('invalid login credentials')) return 'Invalid login credentials. Check your email and password.';
+  if (code.includes('email_not_confirmed') || raw.toLowerCase().includes('email not confirmed')) return 'Email not confirmed. Check your inbox for the confirmation link before signing in.';
+  if (code.includes('user_banned') || code.includes('user_disabled') || raw.toLowerCase().includes('banned') || raw.toLowerCase().includes('inactive')) return 'This account is inactive. Contact support if you need access restored.';
+  if (code.includes('user_already_exists') || code.includes('email_exists') || raw.toLowerCase().includes('already registered') || raw.toLowerCase().includes('already exists')) return 'An account with this email already exists. Sign in or use Forgot password.';
+  if (code.includes('otp_expired') || raw.toLowerCase().includes('expired')) return 'Your email link has expired or is no longer valid. Please request a new link.';
+  if (code === 'access_denied') return 'Authentication was not completed. Please try again.';
+  return raw || `Supabase Auth request failed${status ? ` with status ${status}` : ''}.`;
+}
+
 async function supabaseAuth(path, payload) {
   if (!supabaseReady()) throw new Error('Supabase Auth is not configured for this deployment.');
   const response = await fetch(`${runtime.supabaseUrl}/auth/v1/${path}`, {
@@ -124,8 +156,76 @@ async function supabaseAuth(path, payload) {
     body: JSON.stringify(payload),
   });
   const data = await response.json().catch(() => ({}));
-  if (!response.ok) throw new Error(data.msg || data.error_description || data.message || 'Supabase Auth request failed.');
+  if (!response.ok) {
+    const error = new Error(authErrorMessage(data, response.status));
+    error.code = data?.error_code || data?.error || '';
+    error.status = response.status;
+    throw error;
+  }
   return data;
+}
+
+function readAuthCallback() {
+  const candidates = [];
+  const addCandidate = (value) => {
+    const candidate = String(value || '').replace(/^\?/, '');
+    if (candidate) candidates.push(candidate);
+  };
+  const hash = String(window.location.hash || '').slice(1);
+  if (hash) {
+    const nestedHash = hash.indexOf('#');
+    if (nestedHash >= 0) addCandidate(hash.slice(nestedHash + 1));
+    const queryStart = hash.indexOf('?');
+    if (queryStart >= 0) addCandidate(hash.slice(queryStart + 1));
+    if (!hash.startsWith('/') || hash.slice(1).startsWith('error=') || hash.slice(1).startsWith('access_token=') || hash.slice(1).startsWith('refresh_token=')) addCandidate(hash.startsWith('/') ? hash.slice(1) : hash);
+  }
+  if (window.location.search) addCandidate(window.location.search);
+  for (const candidate of candidates) {
+    const params = new URLSearchParams(candidate);
+    const hasCallbackData = ['access_token', 'refresh_token', 'error', 'error_code', 'error_description'].some((key) => params.has(key));
+    if (hasCallbackData) return { params, hash };
+  }
+  return null;
+}
+
+function replaceAuthCallbackUrl(route) {
+  window.history.replaceState({}, document.title, `${window.location.pathname}${route}`);
+}
+
+function handleSupabaseCallback() {
+  const callback = readAuthCallback();
+  if (!callback) return false;
+  const params = callback.params;
+  const errorCode = params.get('error_code') || params.get('error') || '';
+  const errorDescription = params.get('error_description') || '';
+  if (errorCode || errorDescription) {
+    authError = authErrorMessage({ error_code: errorCode, error_description: errorDescription }, 400);
+    authNotice = null;
+    storeRecoverySession(null);
+    replaceAuthCallbackUrl('#/auth-error');
+    return true;
+  }
+  const session = {
+    access_token: params.get('access_token') || '',
+    refresh_token: params.get('refresh_token') || '',
+    token_type: params.get('token_type') || 'bearer',
+    expires_in: Number(params.get('expires_in') || 3600),
+    expires_at: Number(params.get('expires_at') || 0) || undefined,
+  };
+  if (!session.access_token) return false;
+  storeSupabaseSession(session);
+  const callbackType = String(params.get('type') || '').toLowerCase();
+  const recovery = callbackType === 'recovery' || callback.hash.includes('/reset-password');
+  if (recovery) {
+    storeRecoverySession(session);
+    authNotice = null;
+    replaceAuthCallbackUrl('#/reset-password');
+  } else {
+    storeRecoverySession(null);
+    authNotice = { tone: 'success', message: 'Email confirmed successfully. You can now sign in.' };
+    replaceAuthCallbackUrl('#/login');
+  }
+  return true;
 }
 
 async function authenticatedApi(path, options = {}) {
@@ -135,7 +235,24 @@ async function authenticatedApi(path, options = {}) {
     body: options.body === undefined ? undefined : JSON.stringify(options.body),
   });
   const data = await response.json().catch(() => ({}));
-  if (!response.ok) throw new Error(data.error || 'Authenticated request failed.');
+  if (!response.ok) {
+    const error = new Error(data.error || 'Authenticated request failed.');
+    error.status = response.status;
+    throw error;
+  }
+  return data;
+}
+
+async function updateSupabasePassword(password) {
+  const accessToken = recoverySession?.access_token || sessionAccessToken();
+  if (!supabaseReady() || !accessToken) throw new Error('This password reset link is no longer active. Request a new link.');
+  const response = await fetch(`${runtime.supabaseUrl}/auth/v1/user`, {
+    method: 'PUT',
+    headers: { apikey: runtime.supabaseAnonKey, Authorization: `Bearer ${accessToken}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password }),
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(authErrorMessage(data, response.status));
   return data;
 }
 
@@ -329,18 +446,28 @@ async function startRazorpayPayment(checkoutData) {
 }
 
 async function hydrateSupabaseSession() {
-  if (!supabaseReady() || !sessionAccessToken()) return;
+  if (!supabaseReady()) return;
+  if (!sessionAccessToken()) {
+    state.session = null;
+    state.profile = null;
+    saveState();
+    return;
+  }
   try {
     const session = await authenticatedApi('/api/auth/session');
     state.session = { role: session.role || 'customer', email: session.user?.email || '', userId: session.user?.id || '' };
     const profile = await authenticatedApi('/api/profile');
-    if (profile.profile) state.profile = { ...(state.profile || {}), ...mapRemoteProfile(profile.profile) };
+    state.profile = profile.profile
+      ? mapRemoteProfile({ ...profile.profile, email: session.user?.email || '' })
+      : { email: session.user?.email || '', businessName: 'Business profile pending', ownerName: '', phone: '', customerType: 'Other', gstNumber: '', address: '' };
     saveState();
     renderShell();
     await reconcilePendingRazorpay();
   } catch {
     storeSupabaseSession(null);
+    storeRecoverySession(null);
     state.session = null;
+    state.profile = null;
     saveState();
     renderShell();
   }
@@ -354,6 +481,7 @@ async function signOutSupabase() {
     }).catch(() => {});
   }
   storeSupabaseSession(null);
+  storeRecoverySession(null);
 }
 
 function normalizeRemoteProduct(raw) {
@@ -820,15 +948,33 @@ function renderCheckout() {
 function renderRegister() {
   const passwordRequired = supabaseReady() ? 'required minlength="8"' : '';
   const authNote = supabaseReady() ? 'Authentication is handled by Supabase Auth for this deployment.' : 'This local preview stores a browser-only session until Supabase Auth is configured.';
-  return `<div class="shell form-page narrow-page">${pageTitle('B2B registration', 'Create your business profile', 'Save business details once, then reuse them for quotes, checkout and customer account workflows.')}<form class="form-card" data-form="register"><div class="form-grid"><label>Business name<input name="businessName" required placeholder="Registered business name" /></label><label>Owner name<input name="ownerName" required placeholder="Primary contact" /></label><label>Mobile number<input name="phone" required placeholder="Business contact number" /></label><label>Email<input name="email" type="email" required placeholder="name@business.com" /></label><label>Password<input name="password" type="password" ${passwordRequired} autocomplete="new-password" placeholder="At least 8 characters" /></label><label>Confirm password<input name="passwordConfirm" type="password" ${passwordRequired} autocomplete="new-password" placeholder="Repeat password" /></label><label>GST number<input name="gstNumber" placeholder="Optional until configured" /></label><label>Customer type<select name="customerType"><option>Pharmacy</option><option>Hospital</option><option>Clinic</option><option>Medical Store</option><option>Distributor</option><option>Other</option></select></label><label class="full-span">Business address<textarea name="address" required rows="5" placeholder="Business address"></textarea></label></div><label class="checkbox-line"><input type="checkbox" required /> I confirm this is an authorized business account request.</label><button class="button button-dark" type="submit">Create profile <span>↗</span></button><p class="form-footnote">${authNote}</p></form></div>`;
+  return `<div class="shell form-page narrow-page">${pageTitle('B2B registration', 'Create your business profile', 'Save business details once, then reuse them for quotes, checkout and customer account workflows.')}<form class="form-card" data-form="register"><div class="form-grid"><label>Business name<input name="businessName" required placeholder="Registered business name" /></label><label>Owner name<input name="ownerName" required placeholder="Primary contact" /></label><label>Mobile number<input name="phone" required placeholder="Business contact number" /></label><label>Email<input name="email" type="email" required placeholder="name@business.com" /></label><label>Password<input name="password" type="password" ${passwordRequired} autocomplete="new-password" placeholder="At least 8 characters" /></label><label>Confirm password<input name="passwordConfirm" type="password" ${passwordRequired} autocomplete="new-password" placeholder="Repeat password" /></label><label>GST number<input name="gstNumber" placeholder="Optional until configured" /></label><label>Customer type<select name="customerType"><option>Pharmacy</option><option>Hospital</option><option>Clinic</option><option>Medical Store</option><option>Distributor</option><option>Other</option></select></label><label class="full-span">Business address<textarea name="address" required rows="5" placeholder="Business address"></textarea></label></div><label class="checkbox-line"><input type="checkbox" required /> I confirm this is an authorized business account request.</label><button class="button button-dark" type="submit">Create profile <span>↗</span></button><p class="form-footnote">${authNote} Already have an account? <a href="#/login">Sign in</a></p></form></div>`;
 }
 
 function renderLogin() {
   const authMessage = supabaseReady() ? 'Supabase Auth is enabled for this deployment.' : 'This local preview creates a browser session for workflow testing. No credential is bundled or accepted by default.';
-  return `<div class="shell form-page narrow-page">${pageTitle('Customer account', 'Sign in to your business workspace', 'Use your business identity to access orders, quotes and delivery workflows.')}<form class="form-card" data-form="login"><div class="preview-callout"><span class="info-mark">i</span><p>${authMessage}</p></div><div class="form-grid"><label>Email<input name="email" type="email" required autocomplete="email" placeholder="name@business.com" /></label><label>Password<input name="password" type="password" required autocomplete="current-password" placeholder="Your password" /></label></div><button class="button button-dark" type="submit">Continue <span>↗</span></button><p class="form-footnote">Need an account? <a href="#/register">Create a business profile</a></p></form></div>`;
+  const notice = authNotice ? `<div class="preview-callout auth-notice"><span class="info-mark">${authNotice.tone === 'success' ? '✓' : 'i'}</span><p>${esc(authNotice.message)}</p></div>` : '';
+  return `<div class="shell form-page narrow-page">${pageTitle('Customer account', 'Sign in to your business workspace', 'Use your business identity to access orders, quotes and delivery workflows.')}<form class="form-card" data-form="login">${notice}<div class="preview-callout"><span class="info-mark">i</span><p>${authMessage}</p></div><div class="form-grid"><label>Email<input name="email" type="email" required autocomplete="email" placeholder="name@business.com" /></label><label>Password<input name="password" type="password" required autocomplete="current-password" placeholder="Your password" /></label></div><button class="button button-dark" type="submit">Continue <span>↗</span></button><p class="form-footnote"><a href="#/forgot-password">Forgot password?</a> · Need an account? <a href="#/register">Create a business profile</a></p></form></div>`;
+}
+
+function renderForgotPassword() {
+  return `<div class="shell form-page narrow-page">${pageTitle('Account recovery', 'Reset your password', 'Enter your account email and we will send a secure Supabase recovery link.')}<form class="form-card" data-form="forgot-password"><div class="preview-callout"><span class="info-mark">i</span><p>For your privacy, the same confirmation is shown whether or not the email is registered.</p></div><label>Email<input name="email" type="email" required autocomplete="email" placeholder="name@business.com" /></label><button class="button button-dark" type="submit">Send reset link <span>↗</span></button><p class="form-footnote"><a href="#/login">Back to login</a></p></form></div>`;
+}
+
+function renderResetPassword() {
+  const active = Boolean(recoverySession?.access_token);
+  return `<div class="shell form-page narrow-page">${pageTitle('Account recovery', 'Choose a new password', active ? 'Set a new password for your Cosmic Life Force account.' : 'Open the password reset link from your email to continue.')}<form class="form-card" data-form="reset-password"><div class="preview-callout"><span class="info-mark">i</span><p>${active ? 'Your recovery link is ready. Use a password with at least 8 characters.' : 'This page is only available from a valid Supabase recovery link.'}</p></div><label>New password<input name="password" type="password" required minlength="8" autocomplete="new-password" placeholder="At least 8 characters" ${active ? '' : 'disabled'} /></label><label>Confirm new password<input name="passwordConfirm" type="password" required minlength="8" autocomplete="new-password" placeholder="Repeat password" ${active ? '' : 'disabled'} /></label><button class="button button-dark" type="submit" ${active ? '' : 'disabled'}>Update password <span>↗</span></button><p class="form-footnote"><a href="#/login">Back to login</a></p></form></div>`;
+}
+
+function renderAuthError() {
+  const message = authError || 'Authentication was not completed. Please try again.';
+  return `<div class="shell form-page narrow-page"><div class="empty-state large-empty"><div class="empty-icon">AUTH</div><p class="eyebrow">Account access</p><h1>Authentication link unavailable</h1><p>${esc(message)}</p><div class="empty-actions"><a class="button button-dark" href="#/login">Return to login</a><a class="button button-ghost" href="#/forgot-password">Forgot password?</a><a class="button button-ghost" href="#/register">Register</a></div></div></div>`;
 }
 
 function renderAccount() {
+  if (supabaseReady() && (!supabaseSession || !state.session)) {
+    return `<div class="shell form-page narrow-page"><div class="empty-state large-empty"><div class="empty-icon">LOCK</div><h1>Sign in to your business workspace</h1><p>Your account details, orders and quotes are available after Supabase authentication.</p><div class="empty-actions"><a class="button button-dark" href="#/login">Sign in</a><a class="button button-ghost" href="#/register">Create a business profile</a></div></div></div>`;
+  }
   const orders = state.orders;
   const delivered = orders.filter((order) => order.status === 'Delivered').length;
   const pending = orders.filter((order) => order.status !== 'Delivered').length;
@@ -976,7 +1122,7 @@ function renderNotFound(title, description) {
 function renderRoute({ preserveScroll = false, scrollY = 0 } = {}) {
   const main = document.querySelector('#main-content');
   const { path } = pathInfo();
-  let html = path === '/' ? renderHome() : path === '/products' ? renderProducts() : path === '/categories' ? renderCategories() : path === '/brands' || path.startsWith('/brands/') ? renderBrands() : path === '/gallery' ? renderGallery() : path === '/deliveries' ? renderDeliveries() : path === '/quote' ? renderQuote() : path === '/wholesale' ? renderWholesale() : path === '/orders' ? renderOrders() : path === '/cart' ? renderCart() : path === '/checkout' ? renderCheckout() : path === '/register' ? renderRegister() : path === '/login' ? renderLogin() : path === '/account' ? renderAccount() : path === '/about' ? renderAbout() : path === '/contact' ? renderContact() : path === '/admin' ? renderAdmin() : path.startsWith('/product/') ? renderProductDetail(path.split('/')[2]) : path.startsWith('/products/') ? renderProductDetail(path.split('/')[2]) : renderNotFound('Page not found', 'Use the main navigation to return to the catalog.');
+  let html = path === '/' ? renderHome() : path === '/products' ? renderProducts() : path === '/categories' ? renderCategories() : path === '/brands' || path.startsWith('/brands/') ? renderBrands() : path === '/gallery' ? renderGallery() : path === '/deliveries' ? renderDeliveries() : path === '/quote' ? renderQuote() : path === '/wholesale' ? renderWholesale() : path === '/orders' ? renderOrders() : path === '/cart' ? renderCart() : path === '/checkout' ? renderCheckout() : path === '/register' ? renderRegister() : path === '/login' ? renderLogin() : path === '/forgot-password' ? renderForgotPassword() : path === '/reset-password' ? renderResetPassword() : path === '/auth-error' ? renderAuthError() : path === '/account' ? renderAccount() : path === '/about' ? renderAbout() : path === '/contact' ? renderContact() : path === '/admin' ? renderAdmin() : path.startsWith('/product/') ? renderProductDetail(path.split('/')[2]) : path.startsWith('/products/') ? renderProductDetail(path.split('/')[2]) : renderNotFound('Page not found', 'Use the main navigation to return to the catalog.');
   main.innerHTML = html;
   if (preserveScroll) {
     const restore = () => window.scrollTo({ top: scrollY, left: 0, behavior: 'instant' });
@@ -1193,8 +1339,9 @@ document.addEventListener('click', (event) => {
   } else if (action === 'logout') {
     void signOutSupabase();
     state.session = null;
+    state.profile = null;
     saveState();
-    toast('Local preview session ended.');
+    toast('You have been signed out.', 'info');
     navigate('/');
   } else if (action === 'open-delivery-form') {
     navigate(`/account?delivery=${encodeURIComponent(actionTarget.dataset.id)}`);
@@ -1303,8 +1450,11 @@ document.addEventListener('submit', async (event) => {
       }
       try {
         const auth = await supabaseAuth('signup', { email: data.email, password: data.password, options: { data: { business_name: data.businessName, owner_name: data.ownerName } } });
+        if (!auth.access_token && auth.user && Array.isArray(auth.user.identities) && auth.user.identities.length === 0) {
+          throw new Error('An account with this email already exists. Sign in or use Forgot password.');
+        }
         if (!auth.access_token) {
-          toast('Account created. Check your email to confirm access, then sign in.', 'info');
+          authNotice = { tone: 'info', message: 'Account created. Please check your email and confirm your email address before signing in.' };
           navigate('/login');
           return;
         }
@@ -1313,9 +1463,11 @@ document.addEventListener('submit', async (event) => {
         state.session = { role: 'customer', email: data.email, userId: auth.user?.id || '' };
         await saveRemoteProfile(data);
         saveState();
+        authNotice = null;
         toast('Supabase business account created.', 'success');
         navigate('/account');
       } catch (error) {
+        storeSupabaseSession(null);
         toast(error instanceof Error ? error.message : 'Registration failed.', 'error');
       }
     } else {
@@ -1339,16 +1491,23 @@ document.addEventListener('submit', async (event) => {
     if (supabaseReady()) {
       try {
         const auth = await supabaseAuth('token?grant_type=password', { email: data.email, password: data.password });
+        if (!auth.access_token) throw new Error('Supabase did not return an authenticated session.');
         storeSupabaseSession(auth);
         const session = await authenticatedApi('/api/auth/session');
         state.session = { role: session.role || 'customer', email: session.user?.email || data.email, userId: session.user?.id || '' };
         const profile = await authenticatedApi('/api/profile');
-        if (profile.profile) state.profile = { ...(state.profile || {}), ...mapRemoteProfile(profile.profile) };
-        if (!state.profile) state.profile = { email: data.email, businessName: 'Business profile pending', ownerName: '', phone: '', customerType: 'Other' };
+        state.profile = profile.profile
+          ? mapRemoteProfile({ ...profile.profile, email: session.user?.email || data.email })
+          : { email: session.user?.email || data.email, businessName: 'Business profile pending', ownerName: '', phone: '', customerType: 'Other', gstNumber: '', address: '' };
         saveState();
+        authNotice = null;
         toast('Signed in with Supabase Auth.', 'success');
         navigate('/account');
       } catch (error) {
+        storeSupabaseSession(null);
+        state.session = null;
+        state.profile = null;
+        saveState();
         toast(error instanceof Error ? error.message : 'Sign in failed.', 'error');
       }
     } else {
@@ -1357,6 +1516,44 @@ document.addEventListener('submit', async (event) => {
       saveState();
       toast('Local preview session started.', 'success');
       navigate('/account');
+    }
+  } else if (formName === 'forgot-password') {
+    if (!supabaseReady()) {
+      toast('Password recovery is available after Supabase Auth is configured.', 'error');
+      return;
+    }
+    try {
+      await supabaseAuth('recover', { email: data.email, options: { redirectTo: `${window.location.origin}/#/reset-password` } });
+      authNotice = { tone: 'success', message: 'Password reset link sent. Check your email.' };
+      navigate('/login');
+    } catch (error) {
+      toast(error instanceof Error ? error.message : 'Unable to send the password reset link.', 'error');
+    }
+  } else if (formName === 'reset-password') {
+    if (String(data.password || '').length < 8 || data.password !== data.passwordConfirm) {
+      toast('Use a password of at least 8 characters and confirm it correctly.', 'error');
+      return;
+    }
+    try {
+      await updateSupabasePassword(data.password);
+      await signOutSupabase();
+      state.session = null;
+      state.profile = null;
+      saveState();
+      authError = null;
+      authNotice = { tone: 'success', message: 'Password updated successfully. Please sign in.' };
+      navigate('/login');
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Unable to update your password.';
+      if (error?.status === 401 || error?.status === 403 || /expired|no longer active|invalid/i.test(message)) {
+        await signOutSupabase();
+        authError = message;
+        authNotice = null;
+        replaceAuthCallbackUrl('#/auth-error');
+        renderShell();
+      } else {
+        toast(message, 'error');
+      }
     }
   } else if (formName === 'quote-submit') {
     const quotes = JSON.parse(localStorage.getItem('cosmic-life-force-quotes') || '[]');
@@ -1420,8 +1617,12 @@ document.addEventListener('submit', async (event) => {
   }
 });
 
-window.addEventListener('hashchange', renderShell);
+window.addEventListener('hashchange', () => {
+  handleSupabaseCallback();
+  renderShell();
+});
 window.addEventListener('scroll', () => document.querySelector('.site-header')?.classList.toggle('is-scrolled', window.scrollY > 18), { passive: true });
+handleSupabaseCallback();
 renderShell();
 void loadSupabaseCatalog();
 void hydrateSupabaseSession();
